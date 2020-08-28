@@ -5,6 +5,7 @@ Integrações feitas até o momento.
   - Gloria Food
   - Ifood
   - Logaroo
+  - PedZap
   - Super Menu
 
 # Gloria Food
@@ -60,6 +61,13 @@ Para fazer a integração com logaroo é preciso de algumas informações, criei
 	}
 }
 ```
+
+# PedZap
+
+Links importantes:
+  - https://www.pedzap.com.br/
+  - https://pedzap.docs.apiary.io/#introduction/autenticacao
+
 
 
 # Super Menu
