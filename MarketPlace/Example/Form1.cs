@@ -1,5 +1,8 @@
-﻿using GloriaFood.Service;
+﻿using AnotaAi.Service;
+using DeliveryApp.Service;
+using GloriaFood.Service;
 using Logaroo.Enum;
+using MeuCardapioAi.Service;
 using Newtonsoft.Json;
 using PedZap.Enum;
 using PedZap.Service;
@@ -15,11 +18,21 @@ namespace Example
 {
     public partial class Form1 : Form
     {
+        #region Variaveis
+
+        private string _anotaAiSelected { get; set; }
+        private string _anotaAiToken { get; set; }
+        private List<AnotaAi.Domain.order> _anotaAiOrders { get; set; }
+        private string _deliveryAppToken { get; set; }
+        private List<DeliveryApp.Domain.order> _deliveryAppOrders { get; set; }
         private string _ifoodToken { get; set; }
         private List<Ifood.Domain.order> _ifoodOrders { get; set; }
         private string _ifoodReferenceSelected { get; set; }
         private string _gloriaToken { get; set; }
         private List<GloriaFood.Domain.order> _gloriaOrders { get; set; }
+        private string _meuCardapioAiToken { get; set; }
+        private string _meuCardapioAiSelected { get; set; }
+        private List<MeuCardapioAi.Domain.order> _meuCardapioAiOrders { get; set; }
         private string _superMenuToken { get; set; }
         private List<SuperMenu.Domain.order> _superMenuOrders { get; set; }
         private string _superMenuReferenceSelected { get; set; }
@@ -27,6 +40,8 @@ namespace Example
         private string _pedzap { get; set; }
         private List<PedZap.Domain.pedido> _pedzapPedidos { get; set; }
         private int _pedzapReferenceSelected { get; set; }
+
+        #endregion
 
         public Form1()
         {
@@ -44,6 +59,16 @@ namespace Example
                     var marketPlace = JsonConvert.DeserializeObject<MarketPlaceConfig>(fileJson);
                     if (marketPlace != null)
                     {
+                        if (marketPlace.AnotaAi != null)
+                        {
+                            txtAnotaAiToken.Text = marketPlace.AnotaAi.Token;
+                        }
+
+                        if (marketPlace.DeliveryApp != null)
+                        {
+                            txtDeliveryAppToken.Text = marketPlace.DeliveryApp.Token;
+                        }
+
                         if (marketPlace.Ifood != null)
                         {
                             txtIfoodClient_ID.Text = marketPlace.Ifood.Client_ID;
@@ -56,6 +81,13 @@ namespace Example
                         if (marketPlace.Gloria != null)
                         {
                             txtGloriaFoodToken.Text = marketPlace.Gloria.Token;
+                        }
+
+                        if (marketPlace.MeuCardapioAi != null)
+                        {
+                            txtMeuCardapioAiClient_ID.Text = marketPlace.MeuCardapioAi.Client_ID;
+                            txtMeuCardapioAiClient_SECRET.Text = marketPlace.MeuCardapioAi.Client_SECRET;
+                            txtMeuCardapioAiURL.Text = marketPlace.MeuCardapioAi.Url;
                         }
 
                         if (marketPlace.Logaroo != null)
@@ -73,6 +105,14 @@ namespace Example
                 }
             }
 
+            _anotaAiOrders = new List<AnotaAi.Domain.order>();
+            gridAnotaAi.DataSource = _anotaAiOrders.ToList();
+            gridAnotaAi.Refresh();
+
+            _deliveryAppOrders = new List<DeliveryApp.Domain.order>();
+            gridDeliveryApp.DataSource = _deliveryAppOrders.ToList();
+            gridDeliveryApp.Refresh();
+
             _ifoodOrders = new List<Ifood.Domain.order>();
             gridIfood.DataSource = _ifoodOrders.ToList();
             gridIfood.Refresh();
@@ -80,6 +120,10 @@ namespace Example
             _gloriaOrders = new List<GloriaFood.Domain.order>();
             gridGloriaGood.DataSource = _gloriaOrders.ToList();
             gridGloriaGood.Refresh();
+
+            _meuCardapioAiOrders = new List<MeuCardapioAi.Domain.order>();
+            gridMeuCardapioAi.DataSource = _gloriaOrders.ToList();
+            gridMeuCardapioAi.Refresh();
 
             _superMenuOrders = new List<SuperMenu.Domain.order>();
             gridSuperMenu.DataSource = _superMenuOrders.ToList();
@@ -1320,8 +1364,479 @@ namespace Example
         }
 
 
+
         #endregion
 
-        
+        #region DeliveryApp
+        private void btnDeliveryAppIniciar_Click(object sender, EventArgs e)
+        {
+            deliveryAppIniciar();
+        }
+
+        private void btnDeliveryAppParar_Click(object sender, EventArgs e)
+        {
+            deliveryAppParar();
+        }
+
+        public async void deliveryAppIniciar()
+        {
+            if (string.IsNullOrEmpty(txtDeliveryAppToken.Text))
+            {
+                MessageBox.Show("Campo Token Obrigatório");
+                return;
+            }
+
+            txtDeliveryAppToken.Enabled = false;
+
+            btnDeliveryAppIniciar.Enabled = false;
+            btnDeliveryAppParar.Enabled = true;
+            _deliveryAppToken = txtDeliveryAppToken.Text;
+            await Task.Run(() => deliveryApp());
+        }
+
+        private void deliveryApp()
+        {
+            var deliveryAppService = new DeliveryAppService();
+
+            try
+            {
+                while (btnDeliveryAppParar.Enabled)
+                {
+                    var orderResult = deliveryAppService.Order(_deliveryAppToken);
+                    if (orderResult.Success)
+                    {
+                        _deliveryAppOrders.AddRange(orderResult.Result);
+
+                        WriteGridDeliveryApp();
+                    }
+                    else
+                    {
+                        MessageBox.Show(orderResult.Message);
+                        return;
+                    }
+                    
+                    Thread.Sleep(10000);
+                }
+            }
+            catch (Exception ex)
+            {
+                var message = ex.Message;
+                if (ex.InnerException != null)
+                    message = ex.InnerException.Message;
+
+                MessageBox.Show(message);
+            }
+        }
+
+        private delegate void WritelstGridDeliveryAppDelegate();
+        private void WriteGridDeliveryApp()
+        {
+            if (gridDeliveryApp.InvokeRequired)
+            {
+                var d = new WritelstGridDeliveryAppDelegate(WriteGridDeliveryApp);
+                Invoke(d, new object[] { });
+            }
+            else
+            {
+                gridDeliveryApp.DataSource = _deliveryAppOrders.ToList();
+                gridDeliveryApp.Refresh();
+            }
+        }
+
+        void deliveryAppParar()
+        {
+            txtDeliveryAppToken.Enabled = true;
+
+            btnDeliveryAppIniciar.Enabled = true;
+            btnDeliveryAppParar.Enabled = false;
+        }
+
+        #endregion
+
+        #region Meu Cardápio Ai
+
+        private void btnMeuCardapioAiToken_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtMeuCardapioAiClient_ID.Text))
+            {
+                MessageBox.Show("Campo Client ID Obrigatório");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtMeuCardapioAiClient_SECRET.Text))
+            {
+                MessageBox.Show("Campo Client SECRET Obrigatório");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtMeuCardapioAiURL.Text))
+            {
+                MessageBox.Show("Campo URl Obrigatório");
+                return;
+            }
+
+            var meuCardapioAiService = new MeuCardapioAiService(txtMeuCardapioAiURL.Text);
+            var result = meuCardapioAiService.Token(txtMeuCardapioAiClient_ID.Text, txtMeuCardapioAiClient_SECRET.Text);
+            if(result.Success)
+            {
+                txtMeuCardapioAiToken.Text = result.Result.access_token;
+            }
+            else
+            {
+                MessageBox.Show(result.Message);
+            }
+        }
+
+        private void btnMeuCardapioAiIniciar_Click(object sender, EventArgs e)
+        {
+            meuCardapioAiIniciar();
+        }
+
+        private void btnMeuCardapioAiParar_Click(object sender, EventArgs e)
+        {
+            meuCardapioAiParar();
+        }
+
+        public async void meuCardapioAiIniciar()
+        {
+            if (string.IsNullOrEmpty(txtMeuCardapioAiToken.Text))
+            {
+                MessageBox.Show("Campo Token Obrigatório");
+                return;
+            }
+
+            txtMeuCardapioAiClient_ID.Enabled = false;
+            txtMeuCardapioAiClient_SECRET.Enabled = false;
+            txtMeuCardapioAiURL.Enabled = false;
+
+            btnMeuCardapioAiIniciar.Enabled = false;
+            btnMeuCardapioAiParar.Enabled = true;
+            _meuCardapioAiToken = txtMeuCardapioAiToken.Text;
+            await Task.Run(() => meuCardapioAi());
+        }
+
+        private void meuCardapioAi()
+        {
+            var meuCardapioAiService = new MeuCardapioAiService(txtMeuCardapioAiURL.Text);
+
+            try
+            {
+                while (btnMeuCardapioAiParar.Enabled)
+                {
+                    var orderResult = meuCardapioAiService.Orders(_meuCardapioAiToken, "1");
+                    if (orderResult.Success)
+                    {                        
+                        _meuCardapioAiOrders.AddRange(orderResult.Result.data.pedidos);
+
+                        WriteGridMeuCardapioAi();
+                    }
+                    else
+                    {
+                        MessageBox.Show(orderResult.Message);
+                        return;
+                    }
+
+                    Thread.Sleep(10000);
+                }
+            }
+            catch (Exception ex)
+            {
+                var message = ex.Message;
+                if (ex.InnerException != null)
+                    message = ex.InnerException.Message;
+
+                MessageBox.Show(message);
+            }
+        }
+
+        private delegate void WritelstGridWriteGridMeuCardapioAiDelegate();
+        private void WriteGridMeuCardapioAi()
+        {
+            if (gridMeuCardapioAi.InvokeRequired)
+            {
+                var d = new WritelstGridWriteGridMeuCardapioAiDelegate(WriteGridMeuCardapioAi);
+                Invoke(d, new object[] { });
+            }
+            else
+            {
+                gridMeuCardapioAi.DataSource = _meuCardapioAiOrders.ToList();
+                gridMeuCardapioAi.Refresh();
+            }
+        }
+
+        void meuCardapioAiParar()
+        {            
+            btnMeuCardapioAiIniciar.Enabled = true;
+            btnMeuCardapioAiParar.Enabled = false;
+        }
+
+        private void gridMeuCardapioAi_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1 && e.RowIndex < gridMeuCardapioAi.Rows.Count)
+            {
+                _meuCardapioAiSelected = gridMeuCardapioAi.Rows[e.RowIndex].Cells[3].Value.ToString();
+            }
+        }
+
+        private void btnMeuCardapioAiBuscarPedido_Click(object sender, EventArgs e)
+        {
+            if (btnMeuCardapioAiIniciar.Enabled)
+            {
+                MessageBox.Show("Inicia o aplicativo");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(_meuCardapioAiSelected))
+            {
+                MessageBox.Show("Selecione um registro");
+                return;
+            }
+
+            var meuCardapioAiService = new MeuCardapioAiService(txtMeuCardapioAiURL.Text);
+            var result = meuCardapioAiService.Order(_meuCardapioAiToken, _meuCardapioAiSelected);
+            if (result.Success)
+            {
+                MessageBox.Show("OK");
+            }
+            else
+            {
+                MessageBox.Show(result.Message);
+            }
+        }
+
+
+        #endregion
+
+        #region Anota Ai
+        private void btnAnotaAiIniciar_Click(object sender, EventArgs e)
+        {
+            anotaAiIniciar();
+        }
+
+        private void btnAnotaAiParar_Click(object sender, EventArgs e)
+        {
+            anotaAiParar();
+        }
+
+        public async void anotaAiIniciar()
+        {
+            if (string.IsNullOrEmpty(txtAnotaAiToken.Text))
+            {
+                MessageBox.Show("Campo Token Obrigatório");
+                return;
+            }
+
+            txtAnotaAiToken.Enabled = false;
+
+            btnAnotaAiIniciar.Enabled = false;
+            btnAnotaAiParar.Enabled = true;
+            _anotaAiToken = txtAnotaAiToken.Text;
+            await Task.Run(() => anotaAi());
+        }
+
+        private void anotaAi()
+        {
+            var anotaAiService = new AnotaAiService();
+
+            try
+            {
+                while (btnAnotaAiParar.Enabled)
+                {
+                    var orderResult = anotaAiService.Orders(_anotaAiToken);
+                    if (orderResult.Success)
+                    {
+                        foreach (var item in orderResult.Result.info.docs)
+                        {
+                            _anotaAiOrders.Add(new AnotaAi.Domain.order { 
+                                id = item._id,
+                                check = item.check
+                            });
+                        }
+
+                        WriteGridAnotaAi();
+                    }
+                    else
+                    {
+                        MessageBox.Show(orderResult.Message);
+                        return;
+                    }
+
+                    Thread.Sleep(30000);
+                }
+            }
+            catch (Exception ex)
+            {
+                var message = ex.Message;
+                if (ex.InnerException != null)
+                    message = ex.InnerException.Message;
+
+                MessageBox.Show(message);
+            }
+        }
+
+        private delegate void WritelstGridAnotaAiDelegate();
+        private void WriteGridAnotaAi()
+        {
+            if (gridAnotaAi.InvokeRequired)
+            {
+                var d = new WritelstGridAnotaAiDelegate(WriteGridAnotaAi);
+                Invoke(d, new object[] { });
+            }
+            else
+            {
+                gridAnotaAi.DataSource = _anotaAiOrders.ToList();
+                gridAnotaAi.Refresh();
+            }
+        }
+
+        void anotaAiParar()
+        {
+            txtAnotaAiToken.Enabled = true;
+
+            btnAnotaAiIniciar.Enabled = true;
+            btnAnotaAiParar.Enabled = false;
+        }
+
+        private void gridAnotaAi_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1 && e.RowIndex < gridAnotaAi.Rows.Count)
+            {
+                _anotaAiSelected = gridAnotaAi.Rows[e.RowIndex].Cells[1].Value.ToString();
+            }
+        }
+
+        private void btnAnotaAiBuscarPedido_Click(object sender, EventArgs e)
+        {
+            if (btnAnotaAiIniciar.Enabled)
+            {
+                MessageBox.Show("Inicia o aplicativo");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(_anotaAiSelected))
+            {
+                MessageBox.Show("Selecione um registro");
+                return;
+            }
+
+            var anotaAiService = new AnotaAiService();
+            var result = anotaAiService.Order(_anotaAiToken, _anotaAiSelected);
+            if (result.Success)
+            {
+                MessageBox.Show("Buscando pedido com sucesso");
+            }
+            else
+            {
+                MessageBox.Show(result.Message);
+            }
+        }
+
+        private void btnAnotaAiAceitar_Click(object sender, EventArgs e)
+        {
+            if (btnAnotaAiIniciar.Enabled)
+            {
+                MessageBox.Show("Inicia o aplicativo");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(_anotaAiSelected))
+            {
+                MessageBox.Show("Selecione um registro");
+                return;
+            }
+
+            var anotaAiService = new AnotaAiService();
+            var result = anotaAiService.Accept(_anotaAiToken, _anotaAiSelected);
+            if (result.Success)
+            {
+                MessageBox.Show("Aceito com sucesso");
+            }
+            else
+            {
+                MessageBox.Show(result.Message);
+            }
+        }
+
+        private void btnAnotaAiPedidoPronto_Click(object sender, EventArgs e)
+        {
+            if (btnAnotaAiIniciar.Enabled)
+            {
+                MessageBox.Show("Inicia o aplicativo");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(_anotaAiSelected))
+            {
+                MessageBox.Show("Selecione um registro");
+                return;
+            }
+
+            var anotaAiService = new AnotaAiService();
+            var result = anotaAiService.Ready(_anotaAiToken, _anotaAiSelected);
+            if (result.Success)
+            {
+                MessageBox.Show("Pedido pronto com sucesso");
+            }
+            else
+            {
+                MessageBox.Show(result.Message);
+            }
+        }
+
+        private void btnAnotaAiSaiuParaEntrega_Click(object sender, EventArgs e)
+        {
+            if (btnAnotaAiIniciar.Enabled)
+            {
+                MessageBox.Show("Inicia o aplicativo");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(_anotaAiSelected))
+            {
+                MessageBox.Show("Selecione um registro");
+                return;
+            }
+
+            var anotaAiService = new AnotaAiService();
+            var result = anotaAiService.Finalize(_anotaAiToken, _anotaAiSelected);
+            if (result.Success)
+            {
+                MessageBox.Show("Finalizado com sucesso");
+            }
+            else
+            {
+                MessageBox.Show(result.Message);
+            }
+        }
+
+        private void btnAnotaAiCancelar_Click(object sender, EventArgs e)
+        {
+            if (btnAnotaAiIniciar.Enabled)
+            {
+                MessageBox.Show("Inicia o aplicativo");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(_anotaAiSelected))
+            {
+                MessageBox.Show("Selecione um registro");
+                return;
+            }
+
+            var anotaAiService = new AnotaAiService();
+            var result = anotaAiService.Cancel(_anotaAiToken, _anotaAiSelected, "Teste de Api");
+            if (result.Success)
+            {
+                MessageBox.Show("Cancelado com sucesso");
+            }
+            else
+            {
+                MessageBox.Show(result.Message);
+            }
+        }
+
+        #endregion
+
+
     }
 }
