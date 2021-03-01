@@ -15,12 +15,12 @@ namespace MeuCardapioAi.Domain
         public string mensagemPedido { get; set; }
         public string imagens { get; set; }
         public string empresa { get; set; }
-        public bool exibirNoSite { get; set; }
+        public bool? exibirNoSite { get; set; }
         public int disponibilidade { get; set; }
-        public bool exibirPrecoSite { get; set; }
+        public bool? exibirPrecoSite { get; set; }
         public item_produto_categoria categoria { get; set; }
         public string tipoDeVenda { get; set; }
-        public string unidadeMedida { get; set; }
+        public item_medida unidadeMedida { get; set; }
         public decimal? valorInicial { get; set; }
         public string incremento { get; set; }
         public bool disponivelParaDelivery { get; set; }
