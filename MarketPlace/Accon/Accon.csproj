@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Domain\address.cs" />
     <Compile Include="Domain\externalVendors.cs" />
+    <Compile Include="Domain\latlng.cs" />
     <Compile Include="Domain\order.cs" />
     <Compile Include="Domain\payment.cs" />
     <Compile Include="Domain\price.cs" />
