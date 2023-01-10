@@ -146,7 +146,18 @@
             this.label26 = new System.Windows.Forms.Label();
             this.btnCinddiParar = new System.Windows.Forms.Button();
             this.btnCinddiIniciar = new System.Windows.Forms.Button();
+            this.tabPageCresceVendas = new System.Windows.Forms.TabPage();
+            this.btnCresceVendasPreCadastro = new System.Windows.Forms.Button();
+            this.btnCresceVendasTotalCompras = new System.Windows.Forms.Button();
+            this.btnCresceVendasCancelamento = new System.Windows.Forms.Button();
+            this.btnCresceVendasSaldo = new System.Windows.Forms.Button();
+            this.txtCresceVendasToken = new System.Windows.Forms.TextBox();
+            this.label98 = new System.Windows.Forms.Label();
+            this.btnCresceVendasCompra = new System.Windows.Forms.Button();
+            this.txtCresceVendasEmail = new System.Windows.Forms.TextBox();
+            this.Email = new System.Windows.Forms.Label();
             this.tabPageCRMBonus = new System.Windows.Forms.TabPage();
+            this.btnCRMBonusCancelarBonus = new System.Windows.Forms.Button();
             this.btnCRMBonusVendasTotais = new System.Windows.Forms.Button();
             this.txtCRMBonusBonusID = new System.Windows.Forms.TextBox();
             this.label95 = new System.Windows.Forms.Label();
@@ -321,6 +332,7 @@
             this.btnJotajaParar = new System.Windows.Forms.Button();
             this.btnJotajaIniciar = new System.Windows.Forms.Button();
             this.tabPageMeuCardapioAi = new System.Windows.Forms.TabPage();
+            this.btnMeuCardapioAiTestarJSON = new System.Windows.Forms.Button();
             this.btnMeuCardapioAiCancelar = new System.Windows.Forms.Button();
             this.btnMeuCardapioAiSaiuParaEntrega = new System.Windows.Forms.Button();
             this.btnMeuCardapioAiBuscarPedido = new System.Windows.Forms.Button();
@@ -383,7 +395,23 @@
             this.btnPedZapIniciar = new System.Windows.Forms.Button();
             this.txtPedZapToken = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.tabPageQueroDelivery = new System.Windows.Forms.TabPage();
+            this.btnQuerodeliveryConcluído = new System.Windows.Forms.Button();
+            this.btnQuerodeliveryCancelar = new System.Windows.Forms.Button();
+            this.btnQuerodeliverySaiuParaEntrega = new System.Windows.Forms.Button();
+            this.btnQuerodeliveryProntoRetirada = new System.Windows.Forms.Button();
+            this.txtQuerodeliveryPlaceID = new System.Windows.Forms.TextBox();
+            this.label101 = new System.Windows.Forms.Label();
+            this.btnQuerodeliveryBuscarPedido = new System.Windows.Forms.Button();
+            this.btnQuerodeliveryAceitar = new System.Windows.Forms.Button();
+            this.gridQuerodelivery = new System.Windows.Forms.DataGridView();
+            this.txtQuerodeliveryToken = new System.Windows.Forms.TextBox();
+            this.label100 = new System.Windows.Forms.Label();
+            this.btnQuerodeliveryParar = new System.Windows.Forms.Button();
+            this.btnQuerodeliveryIniciar = new System.Windows.Forms.Button();
             this.tabPageRappi = new System.Windows.Forms.TabPage();
+            this.txtRappiStoreId = new System.Windows.Forms.TextBox();
+            this.label97 = new System.Windows.Forms.Label();
             this.btnRappiRejeitado = new System.Windows.Forms.Button();
             this.btnRappiPedidoPronto = new System.Windows.Forms.Button();
             this.btnRappiAceitarPedido = new System.Windows.Forms.Button();
@@ -400,6 +428,9 @@
             this.btnRappiParar = new System.Windows.Forms.Button();
             this.btnRappiIniciar = new System.Windows.Forms.Button();
             this.tabPageServit = new System.Windows.Forms.TabPage();
+            this.btnServitTransferencia = new System.Windows.Forms.Button();
+            this.txtServitMesaDestino = new System.Windows.Forms.TextBox();
+            this.label99 = new System.Windows.Forms.Label();
             this.txtServitMesa = new System.Windows.Forms.TextBox();
             this.label96 = new System.Windows.Forms.Label();
             this.btnServitFinalizar = new System.Windows.Forms.Button();
@@ -446,16 +477,6 @@
             this.gridUberEats = new System.Windows.Forms.DataGridView();
             this.btnUberEatsParar = new System.Windows.Forms.Button();
             this.btnUberEatsIniciar = new System.Windows.Forms.Button();
-            this.tabPageCresceVendas = new System.Windows.Forms.TabPage();
-            this.btnCresceVendasCompra = new System.Windows.Forms.Button();
-            this.txtCresceVendasEmail = new System.Windows.Forms.TextBox();
-            this.Email = new System.Windows.Forms.Label();
-            this.txtCresceVendasToken = new System.Windows.Forms.TextBox();
-            this.label98 = new System.Windows.Forms.Label();
-            this.btnCresceVendasSaldo = new System.Windows.Forms.Button();
-            this.btnCresceVendasCancelamento = new System.Windows.Forms.Button();
-            this.btnCresceVendasTotalCompras = new System.Windows.Forms.Button();
-            this.btnCresceVendasPreCadastro = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPageAccon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridAccon)).BeginInit();
@@ -474,6 +495,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridB2Food)).BeginInit();
             this.tabPageCinddi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridCinddi)).BeginInit();
+            this.tabPageCresceVendas.SuspendLayout();
             this.tabPageCRMBonus.SuspendLayout();
             this.tabPageDeliveryApp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridDeliveryApp)).BeginInit();
@@ -503,6 +525,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridOnPedido)).BeginInit();
             this.tabPagePedZap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridPedZap)).BeginInit();
+            this.tabPageQueroDelivery.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridQuerodelivery)).BeginInit();
             this.tabPageRappi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridRappi)).BeginInit();
             this.tabPageServit.SuspendLayout();
@@ -511,7 +535,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridSuperMenu)).BeginInit();
             this.tabPageUberEats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridUberEats)).BeginInit();
-            this.tabPageCresceVendas.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -539,6 +562,7 @@
             this.tabControl1.Controls.Add(this.tabPageLogaroo);
             this.tabControl1.Controls.Add(this.tabPageOnPedido);
             this.tabControl1.Controls.Add(this.tabPagePedZap);
+            this.tabControl1.Controls.Add(this.tabPageQueroDelivery);
             this.tabControl1.Controls.Add(this.tabPageRappi);
             this.tabControl1.Controls.Add(this.tabPageServit);
             this.tabControl1.Controls.Add(this.tabPageSuperMenu);
@@ -1825,8 +1849,120 @@
             this.btnCinddiIniciar.UseVisualStyleBackColor = true;
             this.btnCinddiIniciar.Click += new System.EventHandler(this.btnCinddiIniciar_Click);
             // 
+            // tabPageCresceVendas
+            // 
+            this.tabPageCresceVendas.Controls.Add(this.btnCresceVendasPreCadastro);
+            this.tabPageCresceVendas.Controls.Add(this.btnCresceVendasTotalCompras);
+            this.tabPageCresceVendas.Controls.Add(this.btnCresceVendasCancelamento);
+            this.tabPageCresceVendas.Controls.Add(this.btnCresceVendasSaldo);
+            this.tabPageCresceVendas.Controls.Add(this.txtCresceVendasToken);
+            this.tabPageCresceVendas.Controls.Add(this.label98);
+            this.tabPageCresceVendas.Controls.Add(this.btnCresceVendasCompra);
+            this.tabPageCresceVendas.Controls.Add(this.txtCresceVendasEmail);
+            this.tabPageCresceVendas.Controls.Add(this.Email);
+            this.tabPageCresceVendas.Location = new System.Drawing.Point(4, 22);
+            this.tabPageCresceVendas.Name = "tabPageCresceVendas";
+            this.tabPageCresceVendas.Size = new System.Drawing.Size(1229, 685);
+            this.tabPageCresceVendas.TabIndex = 26;
+            this.tabPageCresceVendas.Text = "Cresce Vendas";
+            this.tabPageCresceVendas.UseVisualStyleBackColor = true;
+            // 
+            // btnCresceVendasPreCadastro
+            // 
+            this.btnCresceVendasPreCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCresceVendasPreCadastro.Location = new System.Drawing.Point(659, 68);
+            this.btnCresceVendasPreCadastro.Name = "btnCresceVendasPreCadastro";
+            this.btnCresceVendasPreCadastro.Size = new System.Drawing.Size(145, 33);
+            this.btnCresceVendasPreCadastro.TabIndex = 39;
+            this.btnCresceVendasPreCadastro.Text = "Pré-Cadastro";
+            this.btnCresceVendasPreCadastro.UseVisualStyleBackColor = true;
+            this.btnCresceVendasPreCadastro.Click += new System.EventHandler(this.btnCresceVendasPreCadastro_Click);
+            // 
+            // btnCresceVendasTotalCompras
+            // 
+            this.btnCresceVendasTotalCompras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCresceVendasTotalCompras.Location = new System.Drawing.Point(498, 68);
+            this.btnCresceVendasTotalCompras.Name = "btnCresceVendasTotalCompras";
+            this.btnCresceVendasTotalCompras.Size = new System.Drawing.Size(145, 33);
+            this.btnCresceVendasTotalCompras.TabIndex = 38;
+            this.btnCresceVendasTotalCompras.Text = "Total de Compras";
+            this.btnCresceVendasTotalCompras.UseVisualStyleBackColor = true;
+            this.btnCresceVendasTotalCompras.Click += new System.EventHandler(this.btnCresceVendasTotalCompras_Click);
+            // 
+            // btnCresceVendasCancelamento
+            // 
+            this.btnCresceVendasCancelamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCresceVendasCancelamento.Location = new System.Drawing.Point(335, 68);
+            this.btnCresceVendasCancelamento.Name = "btnCresceVendasCancelamento";
+            this.btnCresceVendasCancelamento.Size = new System.Drawing.Size(145, 33);
+            this.btnCresceVendasCancelamento.TabIndex = 37;
+            this.btnCresceVendasCancelamento.Text = "Cancelamento";
+            this.btnCresceVendasCancelamento.UseVisualStyleBackColor = true;
+            this.btnCresceVendasCancelamento.Click += new System.EventHandler(this.btnCresceVendasCancelamento_Click);
+            // 
+            // btnCresceVendasSaldo
+            // 
+            this.btnCresceVendasSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCresceVendasSaldo.Location = new System.Drawing.Point(172, 68);
+            this.btnCresceVendasSaldo.Name = "btnCresceVendasSaldo";
+            this.btnCresceVendasSaldo.Size = new System.Drawing.Size(145, 33);
+            this.btnCresceVendasSaldo.TabIndex = 36;
+            this.btnCresceVendasSaldo.Text = "Saldo";
+            this.btnCresceVendasSaldo.UseVisualStyleBackColor = true;
+            this.btnCresceVendasSaldo.Click += new System.EventHandler(this.btnCresceVendasSaldo_Click);
+            // 
+            // txtCresceVendasToken
+            // 
+            this.txtCresceVendasToken.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCresceVendasToken.Location = new System.Drawing.Point(569, 24);
+            this.txtCresceVendasToken.Name = "txtCresceVendasToken";
+            this.txtCresceVendasToken.Size = new System.Drawing.Size(291, 26);
+            this.txtCresceVendasToken.TabIndex = 35;
+            this.txtCresceVendasToken.Text = "4RZiSC1DxwmknDVapMmL";
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label98.Location = new System.Drawing.Point(449, 27);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(62, 20);
+            this.label98.TabIndex = 34;
+            this.label98.Text = "TOKEN";
+            // 
+            // btnCresceVendasCompra
+            // 
+            this.btnCresceVendasCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCresceVendasCompra.Location = new System.Drawing.Point(12, 68);
+            this.btnCresceVendasCompra.Name = "btnCresceVendasCompra";
+            this.btnCresceVendasCompra.Size = new System.Drawing.Size(145, 33);
+            this.btnCresceVendasCompra.TabIndex = 33;
+            this.btnCresceVendasCompra.Text = "Criar Compra";
+            this.btnCresceVendasCompra.UseVisualStyleBackColor = true;
+            this.btnCresceVendasCompra.Click += new System.EventHandler(this.btnCresceVendasCompra_Click);
+            // 
+            // txtCresceVendasEmail
+            // 
+            this.txtCresceVendasEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCresceVendasEmail.Location = new System.Drawing.Point(128, 27);
+            this.txtCresceVendasEmail.Name = "txtCresceVendasEmail";
+            this.txtCresceVendasEmail.Size = new System.Drawing.Size(291, 26);
+            this.txtCresceVendasEmail.TabIndex = 31;
+            this.txtCresceVendasEmail.Text = "izzyway139@valedesconto.api";
+            // 
+            // Email
+            // 
+            this.Email.AutoSize = true;
+            this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Email.Location = new System.Drawing.Point(8, 30);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(48, 20);
+            this.Email.TabIndex = 30;
+            this.Email.Text = "Email";
+            // 
             // tabPageCRMBonus
             // 
+            this.tabPageCRMBonus.Controls.Add(this.btnCRMBonusCancelarBonus);
             this.tabPageCRMBonus.Controls.Add(this.btnCRMBonusVendasTotais);
             this.tabPageCRMBonus.Controls.Add(this.txtCRMBonusBonusID);
             this.tabPageCRMBonus.Controls.Add(this.label95);
@@ -1864,6 +2000,17 @@
             this.tabPageCRMBonus.TabIndex = 25;
             this.tabPageCRMBonus.Text = "CRM Bonus";
             this.tabPageCRMBonus.UseVisualStyleBackColor = true;
+            // 
+            // btnCRMBonusCancelarBonus
+            // 
+            this.btnCRMBonusCancelarBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCRMBonusCancelarBonus.Location = new System.Drawing.Point(478, 431);
+            this.btnCRMBonusCancelarBonus.Name = "btnCRMBonusCancelarBonus";
+            this.btnCRMBonusCancelarBonus.Size = new System.Drawing.Size(171, 39);
+            this.btnCRMBonusCancelarBonus.TabIndex = 59;
+            this.btnCRMBonusCancelarBonus.Text = "Cancelar Bônus";
+            this.btnCRMBonusCancelarBonus.UseVisualStyleBackColor = true;
+            this.btnCRMBonusCancelarBonus.Click += new System.EventHandler(this.btnCRMBonusCancelarBonus_Click);
             // 
             // btnCRMBonusVendasTotais
             // 
@@ -1943,10 +2090,10 @@
             // 
             // txtCRMBonusJSON
             // 
-            this.txtCRMBonusJSON.Location = new System.Drawing.Point(22, 431);
+            this.txtCRMBonusJSON.Location = new System.Drawing.Point(22, 500);
             this.txtCRMBonusJSON.Name = "txtCRMBonusJSON";
             this.txtCRMBonusJSON.ReadOnly = true;
-            this.txtCRMBonusJSON.Size = new System.Drawing.Size(1187, 246);
+            this.txtCRMBonusJSON.Size = new System.Drawing.Size(1187, 177);
             this.txtCRMBonusJSON.TabIndex = 50;
             this.txtCRMBonusJSON.Text = "";
             // 
@@ -3719,6 +3866,7 @@
             // 
             // tabPageMeuCardapioAi
             // 
+            this.tabPageMeuCardapioAi.Controls.Add(this.btnMeuCardapioAiTestarJSON);
             this.tabPageMeuCardapioAi.Controls.Add(this.btnMeuCardapioAiCancelar);
             this.tabPageMeuCardapioAi.Controls.Add(this.btnMeuCardapioAiSaiuParaEntrega);
             this.tabPageMeuCardapioAi.Controls.Add(this.btnMeuCardapioAiBuscarPedido);
@@ -3742,6 +3890,17 @@
             this.tabPageMeuCardapioAi.TabIndex = 6;
             this.tabPageMeuCardapioAi.Text = "Meu Cardário Ai";
             this.tabPageMeuCardapioAi.UseVisualStyleBackColor = true;
+            // 
+            // btnMeuCardapioAiTestarJSON
+            // 
+            this.btnMeuCardapioAiTestarJSON.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMeuCardapioAiTestarJSON.Location = new System.Drawing.Point(549, 161);
+            this.btnMeuCardapioAiTestarJSON.Name = "btnMeuCardapioAiTestarJSON";
+            this.btnMeuCardapioAiTestarJSON.Size = new System.Drawing.Size(171, 39);
+            this.btnMeuCardapioAiTestarJSON.TabIndex = 29;
+            this.btnMeuCardapioAiTestarJSON.Text = "Testar JSON";
+            this.btnMeuCardapioAiTestarJSON.UseVisualStyleBackColor = true;
+            this.btnMeuCardapioAiTestarJSON.Click += new System.EventHandler(this.btnMeuCardapioAiTestarJSON_Click);
             // 
             // btnMeuCardapioAiCancelar
             // 
@@ -4415,8 +4574,167 @@
             this.label13.TabIndex = 8;
             this.label13.Text = "TOKEN";
             // 
+            // tabPageQueroDelivery
+            // 
+            this.tabPageQueroDelivery.Controls.Add(this.btnQuerodeliveryConcluído);
+            this.tabPageQueroDelivery.Controls.Add(this.btnQuerodeliveryCancelar);
+            this.tabPageQueroDelivery.Controls.Add(this.btnQuerodeliverySaiuParaEntrega);
+            this.tabPageQueroDelivery.Controls.Add(this.btnQuerodeliveryProntoRetirada);
+            this.tabPageQueroDelivery.Controls.Add(this.txtQuerodeliveryPlaceID);
+            this.tabPageQueroDelivery.Controls.Add(this.label101);
+            this.tabPageQueroDelivery.Controls.Add(this.btnQuerodeliveryBuscarPedido);
+            this.tabPageQueroDelivery.Controls.Add(this.btnQuerodeliveryAceitar);
+            this.tabPageQueroDelivery.Controls.Add(this.gridQuerodelivery);
+            this.tabPageQueroDelivery.Controls.Add(this.txtQuerodeliveryToken);
+            this.tabPageQueroDelivery.Controls.Add(this.label100);
+            this.tabPageQueroDelivery.Controls.Add(this.btnQuerodeliveryParar);
+            this.tabPageQueroDelivery.Controls.Add(this.btnQuerodeliveryIniciar);
+            this.tabPageQueroDelivery.Location = new System.Drawing.Point(4, 22);
+            this.tabPageQueroDelivery.Name = "tabPageQueroDelivery";
+            this.tabPageQueroDelivery.Size = new System.Drawing.Size(1229, 685);
+            this.tabPageQueroDelivery.TabIndex = 27;
+            this.tabPageQueroDelivery.Text = "Quero Delivery";
+            this.tabPageQueroDelivery.UseVisualStyleBackColor = true;
+            // 
+            // btnQuerodeliveryConcluído
+            // 
+            this.btnQuerodeliveryConcluído.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuerodeliveryConcluído.Location = new System.Drawing.Point(804, 76);
+            this.btnQuerodeliveryConcluído.Name = "btnQuerodeliveryConcluído";
+            this.btnQuerodeliveryConcluído.Size = new System.Drawing.Size(145, 33);
+            this.btnQuerodeliveryConcluído.TabIndex = 32;
+            this.btnQuerodeliveryConcluído.Text = "Pedido Concluído";
+            this.btnQuerodeliveryConcluído.UseVisualStyleBackColor = true;
+            this.btnQuerodeliveryConcluído.Click += new System.EventHandler(this.btnQuerodeliveryConcluído_Click);
+            // 
+            // btnQuerodeliveryCancelar
+            // 
+            this.btnQuerodeliveryCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuerodeliveryCancelar.Location = new System.Drawing.Point(314, 76);
+            this.btnQuerodeliveryCancelar.Name = "btnQuerodeliveryCancelar";
+            this.btnQuerodeliveryCancelar.Size = new System.Drawing.Size(145, 33);
+            this.btnQuerodeliveryCancelar.TabIndex = 31;
+            this.btnQuerodeliveryCancelar.Text = "Cancelar";
+            this.btnQuerodeliveryCancelar.UseVisualStyleBackColor = true;
+            this.btnQuerodeliveryCancelar.Click += new System.EventHandler(this.btnQuerodeliveryCancelar_Click);
+            // 
+            // btnQuerodeliverySaiuParaEntrega
+            // 
+            this.btnQuerodeliverySaiuParaEntrega.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuerodeliverySaiuParaEntrega.Location = new System.Drawing.Point(465, 76);
+            this.btnQuerodeliverySaiuParaEntrega.Name = "btnQuerodeliverySaiuParaEntrega";
+            this.btnQuerodeliverySaiuParaEntrega.Size = new System.Drawing.Size(145, 33);
+            this.btnQuerodeliverySaiuParaEntrega.TabIndex = 30;
+            this.btnQuerodeliverySaiuParaEntrega.Text = "Saiu para entrega";
+            this.btnQuerodeliverySaiuParaEntrega.UseVisualStyleBackColor = true;
+            this.btnQuerodeliverySaiuParaEntrega.Click += new System.EventHandler(this.btnQuerodeliverySaiuParaEntrega_Click);
+            // 
+            // btnQuerodeliveryProntoRetirada
+            // 
+            this.btnQuerodeliveryProntoRetirada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuerodeliveryProntoRetirada.Location = new System.Drawing.Point(616, 76);
+            this.btnQuerodeliveryProntoRetirada.Name = "btnQuerodeliveryProntoRetirada";
+            this.btnQuerodeliveryProntoRetirada.Size = new System.Drawing.Size(182, 33);
+            this.btnQuerodeliveryProntoRetirada.TabIndex = 29;
+            this.btnQuerodeliveryProntoRetirada.Text = "Pedido Pronto Retirada";
+            this.btnQuerodeliveryProntoRetirada.UseVisualStyleBackColor = true;
+            this.btnQuerodeliveryProntoRetirada.Click += new System.EventHandler(this.btnQuerodeliveryProntoRetirada_Click);
+            // 
+            // txtQuerodeliveryPlaceID
+            // 
+            this.txtQuerodeliveryPlaceID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuerodeliveryPlaceID.Location = new System.Drawing.Point(578, 35);
+            this.txtQuerodeliveryPlaceID.Name = "txtQuerodeliveryPlaceID";
+            this.txtQuerodeliveryPlaceID.Size = new System.Drawing.Size(291, 26);
+            this.txtQuerodeliveryPlaceID.TabIndex = 28;
+            // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label101.Location = new System.Drawing.Point(458, 38);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(69, 20);
+            this.label101.TabIndex = 27;
+            this.label101.Text = "Place ID";
+            // 
+            // btnQuerodeliveryBuscarPedido
+            // 
+            this.btnQuerodeliveryBuscarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuerodeliveryBuscarPedido.Location = new System.Drawing.Point(12, 76);
+            this.btnQuerodeliveryBuscarPedido.Name = "btnQuerodeliveryBuscarPedido";
+            this.btnQuerodeliveryBuscarPedido.Size = new System.Drawing.Size(145, 33);
+            this.btnQuerodeliveryBuscarPedido.TabIndex = 26;
+            this.btnQuerodeliveryBuscarPedido.Text = "Buscar Pedido";
+            this.btnQuerodeliveryBuscarPedido.UseVisualStyleBackColor = true;
+            this.btnQuerodeliveryBuscarPedido.Click += new System.EventHandler(this.btnQuerodeliveryBuscarPedido_Click);
+            // 
+            // btnQuerodeliveryAceitar
+            // 
+            this.btnQuerodeliveryAceitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuerodeliveryAceitar.Location = new System.Drawing.Point(163, 76);
+            this.btnQuerodeliveryAceitar.Name = "btnQuerodeliveryAceitar";
+            this.btnQuerodeliveryAceitar.Size = new System.Drawing.Size(145, 33);
+            this.btnQuerodeliveryAceitar.TabIndex = 25;
+            this.btnQuerodeliveryAceitar.Text = "Aceitar";
+            this.btnQuerodeliveryAceitar.UseVisualStyleBackColor = true;
+            this.btnQuerodeliveryAceitar.Click += new System.EventHandler(this.btnQuerodeliveryAceitar_Click);
+            // 
+            // gridQuerodelivery
+            // 
+            this.gridQuerodelivery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridQuerodelivery.Location = new System.Drawing.Point(12, 115);
+            this.gridQuerodelivery.Name = "gridQuerodelivery";
+            this.gridQuerodelivery.RowHeadersWidth = 51;
+            this.gridQuerodelivery.Size = new System.Drawing.Size(1209, 551);
+            this.gridQuerodelivery.TabIndex = 24;
+            this.gridQuerodelivery.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridQuerodelivery_CellClick);
+            // 
+            // txtQuerodeliveryToken
+            // 
+            this.txtQuerodeliveryToken.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuerodeliveryToken.Location = new System.Drawing.Point(128, 35);
+            this.txtQuerodeliveryToken.Name = "txtQuerodeliveryToken";
+            this.txtQuerodeliveryToken.Size = new System.Drawing.Size(291, 26);
+            this.txtQuerodeliveryToken.TabIndex = 23;
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label100.Location = new System.Drawing.Point(8, 38);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(62, 20);
+            this.label100.TabIndex = 22;
+            this.label100.Text = "TOKEN";
+            // 
+            // btnQuerodeliveryParar
+            // 
+            this.btnQuerodeliveryParar.Enabled = false;
+            this.btnQuerodeliveryParar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuerodeliveryParar.Location = new System.Drawing.Point(1050, 70);
+            this.btnQuerodeliveryParar.Name = "btnQuerodeliveryParar";
+            this.btnQuerodeliveryParar.Size = new System.Drawing.Size(171, 39);
+            this.btnQuerodeliveryParar.TabIndex = 21;
+            this.btnQuerodeliveryParar.Text = "Parar";
+            this.btnQuerodeliveryParar.UseVisualStyleBackColor = true;
+            this.btnQuerodeliveryParar.Click += new System.EventHandler(this.btnQuerodeliveryParar_Click);
+            // 
+            // btnQuerodeliveryIniciar
+            // 
+            this.btnQuerodeliveryIniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuerodeliveryIniciar.Location = new System.Drawing.Point(1050, 19);
+            this.btnQuerodeliveryIniciar.Name = "btnQuerodeliveryIniciar";
+            this.btnQuerodeliveryIniciar.Size = new System.Drawing.Size(171, 39);
+            this.btnQuerodeliveryIniciar.TabIndex = 20;
+            this.btnQuerodeliveryIniciar.Text = "Iniciar";
+            this.btnQuerodeliveryIniciar.UseVisualStyleBackColor = true;
+            this.btnQuerodeliveryIniciar.Click += new System.EventHandler(this.btnQuerodeliveryIniciar_Click);
+            // 
             // tabPageRappi
             // 
+            this.tabPageRappi.Controls.Add(this.txtRappiStoreId);
+            this.tabPageRappi.Controls.Add(this.label97);
             this.tabPageRappi.Controls.Add(this.btnRappiRejeitado);
             this.tabPageRappi.Controls.Add(this.btnRappiPedidoPronto);
             this.tabPageRappi.Controls.Add(this.btnRappiAceitarPedido);
@@ -4438,6 +4756,24 @@
             this.tabPageRappi.TabIndex = 8;
             this.tabPageRappi.Text = "Rappi";
             this.tabPageRappi.UseVisualStyleBackColor = true;
+            // 
+            // txtRappiStoreId
+            // 
+            this.txtRappiStoreId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRappiStoreId.Location = new System.Drawing.Point(128, 123);
+            this.txtRappiStoreId.Name = "txtRappiStoreId";
+            this.txtRappiStoreId.Size = new System.Drawing.Size(291, 26);
+            this.txtRappiStoreId.TabIndex = 40;
+            // 
+            // label97
+            // 
+            this.label97.AutoSize = true;
+            this.label97.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label97.Location = new System.Drawing.Point(8, 126);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(69, 20);
+            this.label97.TabIndex = 39;
+            this.label97.Text = "Store ID";
             // 
             // btnRappiRejeitado
             // 
@@ -4591,6 +4927,9 @@
             // 
             // tabPageServit
             // 
+            this.tabPageServit.Controls.Add(this.btnServitTransferencia);
+            this.tabPageServit.Controls.Add(this.txtServitMesaDestino);
+            this.tabPageServit.Controls.Add(this.label99);
             this.tabPageServit.Controls.Add(this.txtServitMesa);
             this.tabPageServit.Controls.Add(this.label96);
             this.tabPageServit.Controls.Add(this.btnServitFinalizar);
@@ -4616,6 +4955,36 @@
             this.tabPageServit.TabIndex = 23;
             this.tabPageServit.Text = "Servit";
             this.tabPageServit.UseVisualStyleBackColor = true;
+            // 
+            // btnServitTransferencia
+            // 
+            this.btnServitTransferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServitTransferencia.Location = new System.Drawing.Point(887, 127);
+            this.btnServitTransferencia.Name = "btnServitTransferencia";
+            this.btnServitTransferencia.Size = new System.Drawing.Size(205, 33);
+            this.btnServitTransferencia.TabIndex = 59;
+            this.btnServitTransferencia.Text = "Transferência Completa";
+            this.btnServitTransferencia.UseVisualStyleBackColor = true;
+            this.btnServitTransferencia.Click += new System.EventHandler(this.btnServitTransferencia_Click);
+            // 
+            // txtServitMesaDestino
+            // 
+            this.txtServitMesaDestino.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtServitMesaDestino.Location = new System.Drawing.Point(802, 56);
+            this.txtServitMesaDestino.Name = "txtServitMesaDestino";
+            this.txtServitMesaDestino.Size = new System.Drawing.Size(205, 26);
+            this.txtServitMesaDestino.TabIndex = 58;
+            this.txtServitMesaDestino.Text = "5";
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label99.Location = new System.Drawing.Point(689, 59);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(107, 20);
+            this.label99.TabIndex = 57;
+            this.label99.Text = "Mesa Destino";
             // 
             // txtServitMesa
             // 
@@ -4703,7 +5072,7 @@
             // 
             this.txtServitToken.Enabled = false;
             this.txtServitToken.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtServitToken.Location = new System.Drawing.Point(456, 78);
+            this.txtServitToken.Location = new System.Drawing.Point(456, 88);
             this.txtServitToken.Name = "txtServitToken";
             this.txtServitToken.Size = new System.Drawing.Size(372, 26);
             this.txtServitToken.TabIndex = 48;
@@ -4712,7 +5081,7 @@
             // 
             this.label77.AutoSize = true;
             this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label77.Location = new System.Drawing.Point(336, 78);
+            this.label77.Location = new System.Drawing.Point(336, 88);
             this.label77.Name = "label77";
             this.label77.Size = new System.Drawing.Size(53, 20);
             this.label77.TabIndex = 47;
@@ -4721,7 +5090,7 @@
             // btnServitLogin
             // 
             this.btnServitLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnServitLogin.Location = new System.Drawing.Point(862, 75);
+            this.btnServitLogin.Location = new System.Drawing.Point(862, 88);
             this.btnServitLogin.Name = "btnServitLogin";
             this.btnServitLogin.Size = new System.Drawing.Size(145, 33);
             this.btnServitLogin.TabIndex = 46;
@@ -5110,117 +5479,6 @@
             this.btnUberEatsIniciar.UseVisualStyleBackColor = true;
             this.btnUberEatsIniciar.Click += new System.EventHandler(this.btnUberEatsIniciar_Click);
             // 
-            // tabPageCresceVendas
-            // 
-            this.tabPageCresceVendas.Controls.Add(this.btnCresceVendasPreCadastro);
-            this.tabPageCresceVendas.Controls.Add(this.btnCresceVendasTotalCompras);
-            this.tabPageCresceVendas.Controls.Add(this.btnCresceVendasCancelamento);
-            this.tabPageCresceVendas.Controls.Add(this.btnCresceVendasSaldo);
-            this.tabPageCresceVendas.Controls.Add(this.txtCresceVendasToken);
-            this.tabPageCresceVendas.Controls.Add(this.label98);
-            this.tabPageCresceVendas.Controls.Add(this.btnCresceVendasCompra);
-            this.tabPageCresceVendas.Controls.Add(this.txtCresceVendasEmail);
-            this.tabPageCresceVendas.Controls.Add(this.Email);
-            this.tabPageCresceVendas.Location = new System.Drawing.Point(4, 22);
-            this.tabPageCresceVendas.Name = "tabPageCresceVendas";
-            this.tabPageCresceVendas.Size = new System.Drawing.Size(1229, 685);
-            this.tabPageCresceVendas.TabIndex = 26;
-            this.tabPageCresceVendas.Text = "Cresce Vendas";
-            this.tabPageCresceVendas.UseVisualStyleBackColor = true;
-            // 
-            // btnCresceVendasCompra
-            // 
-            this.btnCresceVendasCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCresceVendasCompra.Location = new System.Drawing.Point(12, 68);
-            this.btnCresceVendasCompra.Name = "btnCresceVendasCompra";
-            this.btnCresceVendasCompra.Size = new System.Drawing.Size(145, 33);
-            this.btnCresceVendasCompra.TabIndex = 33;
-            this.btnCresceVendasCompra.Text = "Criar Compra";
-            this.btnCresceVendasCompra.UseVisualStyleBackColor = true;
-            this.btnCresceVendasCompra.Click += new System.EventHandler(this.btnCresceVendasCompra_Click);
-            // 
-            // txtCresceVendasEmail
-            // 
-            this.txtCresceVendasEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCresceVendasEmail.Location = new System.Drawing.Point(128, 27);
-            this.txtCresceVendasEmail.Name = "txtCresceVendasEmail";
-            this.txtCresceVendasEmail.Size = new System.Drawing.Size(291, 26);
-            this.txtCresceVendasEmail.TabIndex = 31;
-            this.txtCresceVendasEmail.Text = "izzyway139@valedesconto.api";
-            // 
-            // Email
-            // 
-            this.Email.AutoSize = true;
-            this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.Location = new System.Drawing.Point(8, 30);
-            this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(48, 20);
-            this.Email.TabIndex = 30;
-            this.Email.Text = "Email";
-            // 
-            // txtCresceVendasToken
-            // 
-            this.txtCresceVendasToken.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCresceVendasToken.Location = new System.Drawing.Point(569, 24);
-            this.txtCresceVendasToken.Name = "txtCresceVendasToken";
-            this.txtCresceVendasToken.Size = new System.Drawing.Size(291, 26);
-            this.txtCresceVendasToken.TabIndex = 35;
-            this.txtCresceVendasToken.Text = "4RZiSC1DxwmknDVapMmL";
-            // 
-            // label98
-            // 
-            this.label98.AutoSize = true;
-            this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label98.Location = new System.Drawing.Point(449, 27);
-            this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(62, 20);
-            this.label98.TabIndex = 34;
-            this.label98.Text = "TOKEN";
-            // 
-            // btnCresceVendasSaldo
-            // 
-            this.btnCresceVendasSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCresceVendasSaldo.Location = new System.Drawing.Point(172, 68);
-            this.btnCresceVendasSaldo.Name = "btnCresceVendasSaldo";
-            this.btnCresceVendasSaldo.Size = new System.Drawing.Size(145, 33);
-            this.btnCresceVendasSaldo.TabIndex = 36;
-            this.btnCresceVendasSaldo.Text = "Saldo";
-            this.btnCresceVendasSaldo.UseVisualStyleBackColor = true;
-            this.btnCresceVendasSaldo.Click += new System.EventHandler(this.btnCresceVendasSaldo_Click);
-            // 
-            // btnCresceVendasCancelamento
-            // 
-            this.btnCresceVendasCancelamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCresceVendasCancelamento.Location = new System.Drawing.Point(335, 68);
-            this.btnCresceVendasCancelamento.Name = "btnCresceVendasCancelamento";
-            this.btnCresceVendasCancelamento.Size = new System.Drawing.Size(145, 33);
-            this.btnCresceVendasCancelamento.TabIndex = 37;
-            this.btnCresceVendasCancelamento.Text = "Cancelamento";
-            this.btnCresceVendasCancelamento.UseVisualStyleBackColor = true;
-            this.btnCresceVendasCancelamento.Click += new System.EventHandler(this.btnCresceVendasCancelamento_Click);
-            // 
-            // btnCresceVendasTotalCompras
-            // 
-            this.btnCresceVendasTotalCompras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCresceVendasTotalCompras.Location = new System.Drawing.Point(498, 68);
-            this.btnCresceVendasTotalCompras.Name = "btnCresceVendasTotalCompras";
-            this.btnCresceVendasTotalCompras.Size = new System.Drawing.Size(145, 33);
-            this.btnCresceVendasTotalCompras.TabIndex = 38;
-            this.btnCresceVendasTotalCompras.Text = "Total de Compras";
-            this.btnCresceVendasTotalCompras.UseVisualStyleBackColor = true;
-            this.btnCresceVendasTotalCompras.Click += new System.EventHandler(this.btnCresceVendasTotalCompras_Click);
-            // 
-            // btnCresceVendasPreCadastro
-            // 
-            this.btnCresceVendasPreCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCresceVendasPreCadastro.Location = new System.Drawing.Point(659, 68);
-            this.btnCresceVendasPreCadastro.Name = "btnCresceVendasPreCadastro";
-            this.btnCresceVendasPreCadastro.Size = new System.Drawing.Size(145, 33);
-            this.btnCresceVendasPreCadastro.TabIndex = 39;
-            this.btnCresceVendasPreCadastro.Text = "Pré-Cadastro";
-            this.btnCresceVendasPreCadastro.UseVisualStyleBackColor = true;
-            this.btnCresceVendasPreCadastro.Click += new System.EventHandler(this.btnCresceVendasPreCadastro_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5259,6 +5517,8 @@
             this.tabPageCinddi.ResumeLayout(false);
             this.tabPageCinddi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridCinddi)).EndInit();
+            this.tabPageCresceVendas.ResumeLayout(false);
+            this.tabPageCresceVendas.PerformLayout();
             this.tabPageCRMBonus.ResumeLayout(false);
             this.tabPageCRMBonus.PerformLayout();
             this.tabPageDeliveryApp.ResumeLayout(false);
@@ -5301,6 +5561,9 @@
             this.tabPagePedZap.ResumeLayout(false);
             this.tabPagePedZap.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridPedZap)).EndInit();
+            this.tabPageQueroDelivery.ResumeLayout(false);
+            this.tabPageQueroDelivery.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridQuerodelivery)).EndInit();
             this.tabPageRappi.ResumeLayout(false);
             this.tabPageRappi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridRappi)).EndInit();
@@ -5313,8 +5576,6 @@
             this.tabPageUberEats.ResumeLayout(false);
             this.tabPageUberEats.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridUberEats)).EndInit();
-            this.tabPageCresceVendas.ResumeLayout(false);
-            this.tabPageCresceVendas.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -5748,6 +6009,27 @@
         private System.Windows.Forms.Button btnCresceVendasCancelamento;
         private System.Windows.Forms.Button btnCresceVendasTotalCompras;
         private System.Windows.Forms.Button btnCresceVendasPreCadastro;
+        private System.Windows.Forms.TextBox txtRappiStoreId;
+        private System.Windows.Forms.Label label97;
+        private System.Windows.Forms.Button btnCRMBonusCancelarBonus;
+        private System.Windows.Forms.Button btnServitTransferencia;
+        private System.Windows.Forms.TextBox txtServitMesaDestino;
+        private System.Windows.Forms.Label label99;
+        private System.Windows.Forms.Button btnMeuCardapioAiTestarJSON;
+        private System.Windows.Forms.TabPage tabPageQueroDelivery;
+        private System.Windows.Forms.Button btnQuerodeliveryBuscarPedido;
+        private System.Windows.Forms.Button btnQuerodeliveryAceitar;
+        private System.Windows.Forms.DataGridView gridQuerodelivery;
+        private System.Windows.Forms.TextBox txtQuerodeliveryToken;
+        private System.Windows.Forms.Label label100;
+        private System.Windows.Forms.Button btnQuerodeliveryParar;
+        private System.Windows.Forms.Button btnQuerodeliveryIniciar;
+        private System.Windows.Forms.TextBox txtQuerodeliveryPlaceID;
+        private System.Windows.Forms.Label label101;
+        private System.Windows.Forms.Button btnQuerodeliveryCancelar;
+        private System.Windows.Forms.Button btnQuerodeliverySaiuParaEntrega;
+        private System.Windows.Forms.Button btnQuerodeliveryProntoRetirada;
+        private System.Windows.Forms.Button btnQuerodeliveryConcluído;
     }
 }
 
