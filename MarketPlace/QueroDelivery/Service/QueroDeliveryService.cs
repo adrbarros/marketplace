@@ -1,5 +1,6 @@
 ﻿using QueroDelivery.Domain;
 using QueroDelivery.Utils;
+using QueroDelivery.Enum;
 using MarketPlace;
 using Newtonsoft.Json;
 using RestSharp;
@@ -151,6 +152,33 @@ namespace QueroDelivery.Service
             return result;
         }
 
+        public GenericSimpleResult Finalize(string token, string placeid, string orderid)
+        {
+            var result = new GenericSimpleResult();
+            try
+            {
+                var url = string.Format("{0}{1}/{2}/{3}?placeId={4}", Constants.URL_BASE, Constants.URL_ORDER, orderid, Constants.URL_ORDER_COMPLETED, placeid);
+                var client = new RestClient(url);
+                var request = new RestRequest(Method.POST);
+                request.AddHeader("Authorization", "Basic " + token);
+                IRestResponse response = client.Execute(request);
+                if (response.StatusCode == System.Net.HttpStatusCode.Accepted)
+                {
+                    result.Success = true;
+                    result.Json = response.Content;
+                }
+                else
+                {
+                    result.Message = response.Content + " - " + response.StatusDescription;
+                }
+            }
+            catch (Exception ex)
+            {
+                result.Message = ex.Message;
+            }
+            return result;
+        }
+
         public GenericSimpleResult Cancel(string token, string placeid, string orderid, string motivo)
         {
             var result = new GenericSimpleResult();
@@ -159,8 +187,8 @@ namespace QueroDelivery.Service
                 var data = new
                 {
                     reason = motivo,
-                    code = "SYSTEMIC_ISSUES",
-                    mode = "AUTO"
+                    code = CancellationCodes.SYSTEMIC_ISSUES,
+                    mode = CancellationModes.AUTO
                 };
 
                 var url = string.Format("{0}{1}/{2}/{3}?placeId={4}", Constants.URL_BASE, Constants.URL_ORDER, orderid, Constants.URL_ORDER_REJECTION, placeid);
