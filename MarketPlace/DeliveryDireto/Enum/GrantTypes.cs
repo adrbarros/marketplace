@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DeliveryDireto.Enum
 {
-    public class CodTipoProdutoPdv
+    public class GrantTypes
     {
-        public const string CUSTOM = "CUSTOM";
-        public const string EXTRA = "EXTRA";
+        public const string PASSWORD = "password";
+        public const string REFRESH_TOKEN = "refresh_token";
     }
 }
