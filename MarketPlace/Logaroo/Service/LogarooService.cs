@@ -257,6 +257,92 @@ namespace Logaroo.Service
             return result;
         }
 
+        #region Mercadoo
+
+        public GenericResult<order_mercadoo> MercadooOrdersPendentes(string token, string store, string mall_id)
+        {
+            var result = new GenericResult<order_mercadoo>();
+
+            var url = string.Format("{0}{1}?pending=1&store={2}&mall_id={3}", _urlBase, Constants.URL_MERCADOO_ORDENS, store, mall_id);            
+
+            var client = new RestClient(url);
+            var request = new RestRequest(Method.GET);
+            request.AddHeader("Authorization", string.Format("bearer {0}", token));
+            IRestResponse response = client.Execute(request);
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                result.Result = JsonConvert.DeserializeObject<order_mercadoo>(response.Content);
+                result.Success = true;
+                result.Json = response.Content;
+            }
+            else if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                result.Result = new order_mercadoo();
+                result.Success = true;
+            }
+            else
+            {
+                result.Message = response.StatusDescription + " " + response.Content;
+            }
+
+            return result;
+        }
+
+        public GenericResult<order_orders_mercadoo> MercadooOrder(string token, string id)
+        {
+            var result = new GenericResult<order_orders_mercadoo>();
+
+            var url = string.Format("{0}{1}/{2}", _urlBase, Constants.URL_MERCADOO_ORDENS, id);
+
+            var client = new RestClient(url);
+            var request = new RestRequest(Method.GET);
+            request.AddHeader("Authorization", string.Format("bearer {0}", token));
+            IRestResponse response = client.Execute(request);
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                result.Result = JsonConvert.DeserializeObject<order_orders_mercadoo>(response.Content);
+                result.Success = true;
+                result.Json = response.Content;
+            }            
+            else
+            {
+                result.Message = response.StatusDescription + " " + response.Content;
+            }
+
+            return result;
+        }
+
+        public GenericSimpleResult MercadooOrderModerar(string token, string id, bool status)
+        {
+            var result = new GenericSimpleResult();
+
+            var url = string.Format("{0}{1}/{2}/moderate", _urlBase, Constants.URL_MERCADOO_ORDENS, id);
+
+            var data = new
+            {
+                status
+            };
+
+            var client = new RestClient(url);
+            var request = new RestRequest(Method.PUT);
+            request.AddHeader("Authorization", string.Format("bearer {0}", token));
+            request.RequestFormat = DataFormat.Json;
+            request.AddParameter("application/json", JsonConvert.SerializeObject(data), ParameterType.RequestBody);
+            IRestResponse response = client.Execute(request);
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            {                
+                result.Success = true;
+                result.Json = response.Content;
+            }            
+            else
+            {
+                result.Message = response.StatusDescription + " " + response.Content;
+            }
+
+            return result;
+        }
+
+        #endregion
     }
 }
 
