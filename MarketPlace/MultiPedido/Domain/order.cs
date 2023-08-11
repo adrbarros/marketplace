@@ -43,8 +43,7 @@ namespace MultiPedido.Domain
         public decimal? change { get; set; }
         public string payment_status { get; set; }
         public int points_earned { get; set; }
-        public string coordinates { get; set; }
-        public decimal? service_fee { get; set; }
+        public decimal service_fee { get; set; }
         public string card_type { get; set; }
         public string phone { get; set; }
         public decimal? payment_method_operation_value { get; set; }
