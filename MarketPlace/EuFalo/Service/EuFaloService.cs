@@ -39,7 +39,10 @@ namespace EuFalo.Service
             }
             else
             {
-                result.Message = response.Content;
+                if (string.IsNullOrEmpty(response.Content))
+                    result.Message = response.StatusDescription;
+                else
+                    result.Message = response.Content;
             }
 
             result.Json = response.Content;
@@ -59,6 +62,7 @@ namespace EuFalo.Service
                 request.AddHeader("Content-Type", "application/json");
                 request.AddParameter("application/json", JsonConvert.SerializeObject(dados), ParameterType.RequestBody);
                 IRestResponse response = client.Execute(request);
+                result.Json = response.Content;
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
                     result.Result = JsonConvert.DeserializeObject<retorno>(response.Content);
@@ -66,7 +70,10 @@ namespace EuFalo.Service
                 }
                 else
                 {
-                    result.Message = response.Content;
+                    if (string.IsNullOrEmpty(response.Content))
+                        result.Message = response.StatusDescription;
+                    else
+                        result.Message = response.Content;
                 }
 
                 result.Json = response.Content;
@@ -92,6 +99,7 @@ namespace EuFalo.Service
                 request.AddHeader("Content-Type", "application/json");
                 request.AddParameter("application/json", JsonConvert.SerializeObject(dados), ParameterType.RequestBody);
                 IRestResponse response = client.Execute(request);
+                result.Json = response.Content;
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
                     result.Result = JsonConvert.DeserializeObject<retorno>(response.Content);
@@ -99,7 +107,10 @@ namespace EuFalo.Service
                 }
                 else
                 {
-                    result.Message = response.Content;
+                    if (string.IsNullOrEmpty(response.Content))
+                        result.Message = response.StatusDescription;
+                    else
+                        result.Message = response.Content;
                 }
 
                 result.Json = response.Content;
@@ -125,6 +136,7 @@ namespace EuFalo.Service
                 request.AddHeader("Content-Type", "application/json");
                 request.AddParameter("application/json", JsonConvert.SerializeObject(dados), ParameterType.RequestBody);
                 IRestResponse response = client.Execute(request);
+                result.Json = response.Content;
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
                     result.Result = JsonConvert.DeserializeObject<retorno2>(response.Content);
@@ -132,7 +144,10 @@ namespace EuFalo.Service
                 }
                 else
                 {
-                    result.Message = response.Content;
+                    if (string.IsNullOrEmpty(response.Content))
+                        result.Message = response.StatusDescription;
+                    else
+                        result.Message = response.Content;
                 }
 
                 result.Json = response.Content;
@@ -158,6 +173,7 @@ namespace EuFalo.Service
                 request.AddHeader("Content-Type", "application/json");
                 request.AddParameter("application/json", JsonConvert.SerializeObject(dados), ParameterType.RequestBody);
                 IRestResponse response = client.Execute(request);
+                result.Json = response.Content;
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
                     result.Result = JsonConvert.DeserializeObject<retorno2>(response.Content);
@@ -165,7 +181,10 @@ namespace EuFalo.Service
                 }
                 else
                 {
-                    result.Message = response.Content;
+                    if (string.IsNullOrEmpty(response.Content))
+                        result.Message = response.StatusDescription;
+                    else
+                        result.Message = response.Content;
                 }
 
                 result.Json = response.Content;
@@ -191,6 +210,8 @@ namespace EuFalo.Service
                 request.AddHeader("Content-Type", "application/json");
                 request.AddParameter("application/json", JsonConvert.SerializeObject(dados), ParameterType.RequestBody);
                 IRestResponse response = client.Execute(request);
+
+                result.Json = response.Content;
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
                     result.Result = JsonConvert.DeserializeObject<retorno>(response.Content);
@@ -198,10 +219,11 @@ namespace EuFalo.Service
                 }
                 else
                 {
-                    result.Message = response.Content;
+                    if (string.IsNullOrEmpty(response.Content))
+                        result.Message = response.StatusDescription;
+                    else
+                        result.Message = response.Content;
                 }
-
-                result.Json = response.Content;
             }
             catch (Exception ex)
             {
@@ -224,6 +246,7 @@ namespace EuFalo.Service
                 request.AddHeader("Content-Type", "application/json");
                 request.AddParameter("application/json", JsonConvert.SerializeObject(dados), ParameterType.RequestBody);
                 IRestResponse response = client.Execute(request);
+                result.Json = response.Content;
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
                     result.Result = JsonConvert.DeserializeObject<retorno>(response.Content);
@@ -231,7 +254,10 @@ namespace EuFalo.Service
                 }
                 else
                 {
-                    result.Message = response.Content;
+                    if (string.IsNullOrEmpty(response.Content))
+                        result.Message = response.StatusDescription;
+                    else
+                        result.Message = response.Content;
                 }
 
                 result.Json = response.Content;
@@ -256,6 +282,7 @@ namespace EuFalo.Service
                 request.AddHeader("Authorization", "Bearer " + token);
                 request.AddHeader("Content-Type", "application/json");                
                 IRestResponse response = client.Execute(request);
+                result.Json = response.Content;
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
                     result.Result = JsonConvert.DeserializeObject<saldo>(response.Content);
@@ -263,7 +290,10 @@ namespace EuFalo.Service
                 }
                 else
                 {
-                    result.Message = response.Content;
+                    if (string.IsNullOrEmpty(response.Content))
+                        result.Message = response.StatusDescription;
+                    else
+                        result.Message = response.Content;
                 }
 
                 result.Json = response.Content;
@@ -296,6 +326,7 @@ namespace EuFalo.Service
                 request.AddHeader("Content-Type", "application/json");
                 request.AddParameter("application/json", JsonConvert.SerializeObject(dados), ParameterType.RequestBody);
                 IRestResponse response = client.Execute(request);
+                result.Json = response.Content;
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
                     result.Result = JsonConvert.DeserializeObject<resgate>(response.Content);
@@ -303,7 +334,10 @@ namespace EuFalo.Service
                 }
                 else
                 {
-                    result.Message = response.Content;
+                    if (string.IsNullOrEmpty(response.Content))
+                        result.Message = response.StatusDescription;
+                    else
+                        result.Message = response.Content;
                 }
 
                 result.Json = response.Content;

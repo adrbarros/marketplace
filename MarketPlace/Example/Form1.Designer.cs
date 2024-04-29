@@ -80,6 +80,14 @@
             this.label32 = new System.Windows.Forms.Label();
             this.btnPedreiroDigitalParar = new System.Windows.Forms.Button();
             this.btnPedreiroDigitalIniciar = new System.Windows.Forms.Button();
+            this.tabAgilizone = new System.Windows.Forms.TabPage();
+            this.txtAgilizoneToken = new System.Windows.Forms.TextBox();
+            this.btnAgilizoneOrder = new System.Windows.Forms.Button();
+            this.btnAgilizoneToken = new System.Windows.Forms.Button();
+            this.txtAgilizoneClientSecret = new System.Windows.Forms.TextBox();
+            this.label119 = new System.Windows.Forms.Label();
+            this.txtAgilizoneClientID = new System.Windows.Forms.TextBox();
+            this.label120 = new System.Windows.Forms.Label();
             this.tabPageAmericanas = new System.Windows.Forms.TabPage();
             this.btnAmericanasPedidoPronto = new System.Windows.Forms.Button();
             this.btnAmericanasBuscarPedido = new System.Windows.Forms.Button();
@@ -255,6 +263,13 @@
             this.txtEuFaloUsuario = new System.Windows.Forms.TextBox();
             this.label114 = new System.Windows.Forms.Label();
             this.btnEuFaloLogin = new System.Windows.Forms.Button();
+            this.tabPageFidelizi = new System.Windows.Forms.TabPage();
+            this.tabPageFixeCRM = new System.Windows.Forms.TabPage();
+            this.btnFixeCRMLogin = new System.Windows.Forms.Button();
+            this.txtFixeCRMSenha = new System.Windows.Forms.TextBox();
+            this.label121 = new System.Windows.Forms.Label();
+            this.txtFixeCRMUsuario = new System.Windows.Forms.TextBox();
+            this.label122 = new System.Windows.Forms.Label();
             this.tabPageIfood = new System.Windows.Forms.TabPage();
             this.btnIfoodGerarUserCode = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -341,6 +356,16 @@
             this.label35 = new System.Windows.Forms.Label();
             this.btnIDeliveryParar = new System.Windows.Forms.Button();
             this.btnIDeliveryIniciar = new System.Windows.Forms.Button();
+            this.tabPageIorion19 = new System.Windows.Forms.TabPage();
+            this.btnIorionCancelar = new System.Windows.Forms.Button();
+            this.txtIorionURL = new System.Windows.Forms.TextBox();
+            this.label117 = new System.Windows.Forms.Label();
+            this.btnIorionStatus = new System.Windows.Forms.Button();
+            this.gridIorion = new System.Windows.Forms.DataGridView();
+            this.txtIorionToken = new System.Windows.Forms.TextBox();
+            this.label118 = new System.Windows.Forms.Label();
+            this.btnIorion9Parar = new System.Windows.Forms.Button();
+            this.btnIorionIniciar = new System.Windows.Forms.Button();
             this.tabPageJotaJa = new System.Windows.Forms.TabPage();
             this.btnJotajaFinalizarPedido = new System.Windows.Forms.Button();
             this.btnJotajaPagamentoPendente = new System.Windows.Forms.Button();
@@ -558,16 +583,20 @@
             this.label103 = new System.Windows.Forms.Label();
             this.label102 = new System.Windows.Forms.Label();
             this.gridWoocommerce = new System.Windows.Forms.DataGridView();
-            this.tabPageIorion19 = new System.Windows.Forms.TabPage();
-            this.txtIorionURL = new System.Windows.Forms.TextBox();
-            this.label117 = new System.Windows.Forms.Label();
-            this.btnIorionStatus = new System.Windows.Forms.Button();
-            this.gridIorion = new System.Windows.Forms.DataGridView();
-            this.txtIorionToken = new System.Windows.Forms.TextBox();
-            this.label118 = new System.Windows.Forms.Label();
-            this.btnIorion9Parar = new System.Windows.Forms.Button();
-            this.btnIorionIniciar = new System.Windows.Forms.Button();
-            this.btnIorionCancelar = new System.Windows.Forms.Button();
+            this.txtFixeCRMToken = new System.Windows.Forms.TextBox();
+            this.txtFixeCRMIdPassbook = new System.Windows.Forms.TextBox();
+            this.btnFixeCRMConsultarSelo = new System.Windows.Forms.Button();
+            this.txtFixeCRMIdUser = new System.Windows.Forms.TextBox();
+            this.btnFixeCRMPontos = new System.Windows.Forms.Button();
+            this.btnFixeCRMResgatar = new System.Windows.Forms.Button();
+            this.tabPageSelfBuyMe = new System.Windows.Forms.TabPage();
+            this.btnSelfBuyMeOrders = new System.Windows.Forms.Button();
+            this.txtSelfBuyMeToken = new System.Windows.Forms.TextBox();
+            this.label123 = new System.Windows.Forms.Label();
+            this.btnSelfBuyMeOrder = new System.Windows.Forms.Button();
+            this.btnSelfBuyMePointSales = new System.Windows.Forms.Button();
+            this.btnSelfBuyMePointSalesGroup = new System.Windows.Forms.Button();
+            this.btnSelfBuyMeMarkRead = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPageAccon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridAccon)).BeginInit();
@@ -575,6 +604,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridAiqfome)).BeginInit();
             this.tabPageAipedi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridPedreiroDigital)).BeginInit();
+            this.tabAgilizone.SuspendLayout();
             this.tabPageAmericanas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridAmericanas)).BeginInit();
             this.tabPageAnotaAi.SuspendLayout();
@@ -595,6 +625,7 @@
             this.tabPageEpadoca.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridEpadoca)).BeginInit();
             this.tabPageEuFalo.SuspendLayout();
+            this.tabPageFixeCRM.SuspendLayout();
             this.tabPageIfood.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage21.SuspendLayout();
@@ -607,6 +638,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridGoomer)).BeginInit();
             this.tabPageIDelivery.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridiDelivery)).BeginInit();
+            this.tabPageIorion19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridIorion)).BeginInit();
             this.tabPageJotaJa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridJotaJa)).BeginInit();
             this.tabPageMeuCardapioAi.SuspendLayout();
@@ -634,8 +667,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridUberEats)).BeginInit();
             this.tabPageWoocommerce.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridWoocommerce)).BeginInit();
-            this.tabPageIorion19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridIorion)).BeginInit();
+            this.tabPageSelfBuyMe.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -643,6 +675,7 @@
             this.tabControl1.Controls.Add(this.tabPageAccon);
             this.tabControl1.Controls.Add(this.tabPageAiqfome);
             this.tabControl1.Controls.Add(this.tabPageAipedi);
+            this.tabControl1.Controls.Add(this.tabAgilizone);
             this.tabControl1.Controls.Add(this.tabPageAmericanas);
             this.tabControl1.Controls.Add(this.tabPageAnotaAi);
             this.tabControl1.Controls.Add(this.tabPageAtivMob);
@@ -655,6 +688,8 @@
             this.tabControl1.Controls.Add(this.tabPageDeliveryDireto);
             this.tabControl1.Controls.Add(this.tabPageEpadoca);
             this.tabControl1.Controls.Add(this.tabPageEuFalo);
+            this.tabControl1.Controls.Add(this.tabPageFidelizi);
+            this.tabControl1.Controls.Add(this.tabPageFixeCRM);
             this.tabControl1.Controls.Add(this.tabPageIfood);
             this.tabControl1.Controls.Add(this.tabPageGloriaFood);
             this.tabControl1.Controls.Add(this.tabPageGoomer);
@@ -669,6 +704,7 @@
             this.tabControl1.Controls.Add(this.tabPagePixCommerce);
             this.tabControl1.Controls.Add(this.tabPageQueroDelivery);
             this.tabControl1.Controls.Add(this.tabPageRappi);
+            this.tabControl1.Controls.Add(this.tabPageSelfBuyMe);
             this.tabControl1.Controls.Add(this.tabPageServit);
             this.tabControl1.Controls.Add(this.tabPageSimbora);
             this.tabControl1.Controls.Add(this.tabPageSuperMenu);
@@ -1271,6 +1307,99 @@
             this.btnPedreiroDigitalIniciar.Text = "Iniciar";
             this.btnPedreiroDigitalIniciar.UseVisualStyleBackColor = true;
             this.btnPedreiroDigitalIniciar.Click += new System.EventHandler(this.btnPedreiroDigitalIniciar_Click);
+            // 
+            // tabAgilizone
+            // 
+            this.tabAgilizone.Controls.Add(this.txtAgilizoneToken);
+            this.tabAgilizone.Controls.Add(this.btnAgilizoneOrder);
+            this.tabAgilizone.Controls.Add(this.btnAgilizoneToken);
+            this.tabAgilizone.Controls.Add(this.txtAgilizoneClientSecret);
+            this.tabAgilizone.Controls.Add(this.label119);
+            this.tabAgilizone.Controls.Add(this.txtAgilizoneClientID);
+            this.tabAgilizone.Controls.Add(this.label120);
+            this.tabAgilizone.Location = new System.Drawing.Point(4, 25);
+            this.tabAgilizone.Name = "tabAgilizone";
+            this.tabAgilizone.Size = new System.Drawing.Size(1641, 846);
+            this.tabAgilizone.TabIndex = 34;
+            this.tabAgilizone.Text = "Agilizone";
+            this.tabAgilizone.UseVisualStyleBackColor = true;
+            // 
+            // txtAgilizoneToken
+            // 
+            this.txtAgilizoneToken.Enabled = false;
+            this.txtAgilizoneToken.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAgilizoneToken.Location = new System.Drawing.Point(758, 437);
+            this.txtAgilizoneToken.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAgilizoneToken.Name = "txtAgilizoneToken";
+            this.txtAgilizoneToken.Size = new System.Drawing.Size(477, 30);
+            this.txtAgilizoneToken.TabIndex = 40;
+            // 
+            // btnAgilizoneOrder
+            // 
+            this.btnAgilizoneOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgilizoneOrder.Location = new System.Drawing.Point(814, 475);
+            this.btnAgilizoneOrder.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgilizoneOrder.Name = "btnAgilizoneOrder";
+            this.btnAgilizoneOrder.Size = new System.Drawing.Size(193, 41);
+            this.btnAgilizoneOrder.TabIndex = 39;
+            this.btnAgilizoneOrder.Text = "Order";
+            this.btnAgilizoneOrder.UseVisualStyleBackColor = true;
+            this.btnAgilizoneOrder.Click += new System.EventHandler(this.btnAgilizoneOrder_Click);
+            // 
+            // btnAgilizoneToken
+            // 
+            this.btnAgilizoneToken.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgilizoneToken.Location = new System.Drawing.Point(601, 475);
+            this.btnAgilizoneToken.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgilizoneToken.Name = "btnAgilizoneToken";
+            this.btnAgilizoneToken.Size = new System.Drawing.Size(193, 41);
+            this.btnAgilizoneToken.TabIndex = 38;
+            this.btnAgilizoneToken.Text = "Token";
+            this.btnAgilizoneToken.UseVisualStyleBackColor = true;
+            this.btnAgilizoneToken.Click += new System.EventHandler(this.btnAgilizoneToken_Click);
+            // 
+            // txtAgilizoneClientSecret
+            // 
+            this.txtAgilizoneClientSecret.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAgilizoneClientSecret.Location = new System.Drawing.Point(758, 379);
+            this.txtAgilizoneClientSecret.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAgilizoneClientSecret.Name = "txtAgilizoneClientSecret";
+            this.txtAgilizoneClientSecret.Size = new System.Drawing.Size(477, 30);
+            this.txtAgilizoneClientSecret.TabIndex = 37;
+            this.txtAgilizoneClientSecret.Text = "5896817f-27d9-4c3e-8d98-fbc17f20d6ac";
+            // 
+            // label119
+            // 
+            this.label119.AutoSize = true;
+            this.label119.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label119.Location = new System.Drawing.Point(596, 379);
+            this.label119.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label119.Name = "label119";
+            this.label119.Size = new System.Drawing.Size(124, 25);
+            this.label119.TabIndex = 36;
+            this.label119.Text = "Client Secret";
+            this.label119.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtAgilizoneClientID
+            // 
+            this.txtAgilizoneClientID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAgilizoneClientID.Location = new System.Drawing.Point(758, 335);
+            this.txtAgilizoneClientID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAgilizoneClientID.Name = "txtAgilizoneClientID";
+            this.txtAgilizoneClientID.Size = new System.Drawing.Size(477, 30);
+            this.txtAgilizoneClientID.TabIndex = 35;
+            this.txtAgilizoneClientID.Text = "ff11f50b-b6d1-4bd4-9075-07783dc09b50";
+            // 
+            // label120
+            // 
+            this.label120.AutoSize = true;
+            this.label120.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label120.Location = new System.Drawing.Point(634, 339);
+            this.label120.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label120.Name = "label120";
+            this.label120.Size = new System.Drawing.Size(86, 25);
+            this.label120.TabIndex = 34;
+            this.label120.Text = "Client ID";
             // 
             // tabPageAmericanas
             // 
@@ -3372,6 +3501,89 @@
             this.btnEuFaloLogin.UseVisualStyleBackColor = true;
             this.btnEuFaloLogin.Click += new System.EventHandler(this.btnEuFaloLogin_Click);
             // 
+            // tabPageFidelizi
+            // 
+            this.tabPageFidelizi.Location = new System.Drawing.Point(4, 25);
+            this.tabPageFidelizi.Name = "tabPageFidelizi";
+            this.tabPageFidelizi.Size = new System.Drawing.Size(1641, 846);
+            this.tabPageFidelizi.TabIndex = 36;
+            this.tabPageFidelizi.Text = "Fidelizi";
+            this.tabPageFidelizi.UseVisualStyleBackColor = true;
+            // 
+            // tabPageFixeCRM
+            // 
+            this.tabPageFixeCRM.Controls.Add(this.btnFixeCRMResgatar);
+            this.tabPageFixeCRM.Controls.Add(this.btnFixeCRMPontos);
+            this.tabPageFixeCRM.Controls.Add(this.txtFixeCRMIdUser);
+            this.tabPageFixeCRM.Controls.Add(this.btnFixeCRMConsultarSelo);
+            this.tabPageFixeCRM.Controls.Add(this.txtFixeCRMIdPassbook);
+            this.tabPageFixeCRM.Controls.Add(this.txtFixeCRMToken);
+            this.tabPageFixeCRM.Controls.Add(this.btnFixeCRMLogin);
+            this.tabPageFixeCRM.Controls.Add(this.txtFixeCRMSenha);
+            this.tabPageFixeCRM.Controls.Add(this.label121);
+            this.tabPageFixeCRM.Controls.Add(this.txtFixeCRMUsuario);
+            this.tabPageFixeCRM.Controls.Add(this.label122);
+            this.tabPageFixeCRM.Location = new System.Drawing.Point(4, 25);
+            this.tabPageFixeCRM.Name = "tabPageFixeCRM";
+            this.tabPageFixeCRM.Size = new System.Drawing.Size(1641, 846);
+            this.tabPageFixeCRM.TabIndex = 35;
+            this.tabPageFixeCRM.Text = "Fixe CRM";
+            this.tabPageFixeCRM.UseVisualStyleBackColor = true;
+            // 
+            // btnFixeCRMLogin
+            // 
+            this.btnFixeCRMLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFixeCRMLogin.Location = new System.Drawing.Point(528, 432);
+            this.btnFixeCRMLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFixeCRMLogin.Name = "btnFixeCRMLogin";
+            this.btnFixeCRMLogin.Size = new System.Drawing.Size(193, 41);
+            this.btnFixeCRMLogin.TabIndex = 38;
+            this.btnFixeCRMLogin.Text = "Login";
+            this.btnFixeCRMLogin.UseVisualStyleBackColor = true;
+            this.btnFixeCRMLogin.Click += new System.EventHandler(this.btnFixeCRMLogin_Click);
+            // 
+            // txtFixeCRMSenha
+            // 
+            this.txtFixeCRMSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFixeCRMSenha.Location = new System.Drawing.Point(647, 205);
+            this.txtFixeCRMSenha.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFixeCRMSenha.Name = "txtFixeCRMSenha";
+            this.txtFixeCRMSenha.Size = new System.Drawing.Size(336, 30);
+            this.txtFixeCRMSenha.TabIndex = 37;
+            this.txtFixeCRMSenha.Text = "uwg5J@cISuD4$G";
+            // 
+            // label121
+            // 
+            this.label121.AutoSize = true;
+            this.label121.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label121.Location = new System.Drawing.Point(523, 209);
+            this.label121.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label121.Name = "label121";
+            this.label121.Size = new System.Drawing.Size(70, 25);
+            this.label121.TabIndex = 36;
+            this.label121.Text = "Senha";
+            // 
+            // txtFixeCRMUsuario
+            // 
+            this.txtFixeCRMUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFixeCRMUsuario.Location = new System.Drawing.Point(647, 161);
+            this.txtFixeCRMUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFixeCRMUsuario.Name = "txtFixeCRMUsuario";
+            this.txtFixeCRMUsuario.Size = new System.Drawing.Size(336, 30);
+            this.txtFixeCRMUsuario.TabIndex = 35;
+            this.txtFixeCRMUsuario.Text = "operator@fogo36.com.br";
+            // 
+            // label122
+            // 
+            this.label122.AutoSize = true;
+            this.label122.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label122.Location = new System.Drawing.Point(523, 165);
+            this.label122.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label122.Name = "label122";
+            this.label122.Size = new System.Drawing.Size(79, 25);
+            this.label122.TabIndex = 34;
+            this.label122.Text = "Usuario";
+            // 
             // tabPageIfood
             // 
             this.tabPageIfood.Controls.Add(this.btnIfoodGerarUserCode);
@@ -4397,6 +4609,124 @@
             this.btnIDeliveryIniciar.Text = "Iniciar";
             this.btnIDeliveryIniciar.UseVisualStyleBackColor = true;
             this.btnIDeliveryIniciar.Click += new System.EventHandler(this.btnIDeliveryIniciar_Click);
+            // 
+            // tabPageIorion19
+            // 
+            this.tabPageIorion19.Controls.Add(this.btnIorionCancelar);
+            this.tabPageIorion19.Controls.Add(this.txtIorionURL);
+            this.tabPageIorion19.Controls.Add(this.label117);
+            this.tabPageIorion19.Controls.Add(this.btnIorionStatus);
+            this.tabPageIorion19.Controls.Add(this.gridIorion);
+            this.tabPageIorion19.Controls.Add(this.txtIorionToken);
+            this.tabPageIorion19.Controls.Add(this.label118);
+            this.tabPageIorion19.Controls.Add(this.btnIorion9Parar);
+            this.tabPageIorion19.Controls.Add(this.btnIorionIniciar);
+            this.tabPageIorion19.Location = new System.Drawing.Point(4, 25);
+            this.tabPageIorion19.Name = "tabPageIorion19";
+            this.tabPageIorion19.Size = new System.Drawing.Size(1641, 846);
+            this.tabPageIorion19.TabIndex = 33;
+            this.tabPageIorion19.Text = "Iorion19";
+            this.tabPageIorion19.UseVisualStyleBackColor = true;
+            // 
+            // btnIorionCancelar
+            // 
+            this.btnIorionCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIorionCancelar.Location = new System.Drawing.Point(706, 399);
+            this.btnIorionCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIorionCancelar.Name = "btnIorionCancelar";
+            this.btnIorionCancelar.Size = new System.Drawing.Size(228, 48);
+            this.btnIorionCancelar.TabIndex = 59;
+            this.btnIorionCancelar.Text = "Cancelar";
+            this.btnIorionCancelar.UseVisualStyleBackColor = true;
+            this.btnIorionCancelar.Click += new System.EventHandler(this.btnIorionCancelar_Click);
+            // 
+            // txtIorionURL
+            // 
+            this.txtIorionURL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIorionURL.Location = new System.Drawing.Point(859, 25);
+            this.txtIorionURL.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIorionURL.Name = "txtIorionURL";
+            this.txtIorionURL.Size = new System.Drawing.Size(387, 30);
+            this.txtIorionURL.TabIndex = 58;
+            // 
+            // label117
+            // 
+            this.label117.AutoSize = true;
+            this.label117.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label117.Location = new System.Drawing.Point(703, 29);
+            this.label117.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label117.Name = "label117";
+            this.label117.Size = new System.Drawing.Size(50, 25);
+            this.label117.TabIndex = 57;
+            this.label117.Text = "URL";
+            // 
+            // btnIorionStatus
+            // 
+            this.btnIorionStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIorionStatus.Location = new System.Drawing.Point(19, 123);
+            this.btnIorionStatus.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIorionStatus.Name = "btnIorionStatus";
+            this.btnIorionStatus.Size = new System.Drawing.Size(228, 48);
+            this.btnIorionStatus.TabIndex = 56;
+            this.btnIorionStatus.Text = "Status";
+            this.btnIorionStatus.UseVisualStyleBackColor = true;
+            this.btnIorionStatus.Click += new System.EventHandler(this.btnIorionStatus_Click);
+            // 
+            // gridIorion
+            // 
+            this.gridIorion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridIorion.Location = new System.Drawing.Point(15, 178);
+            this.gridIorion.Margin = new System.Windows.Forms.Padding(4);
+            this.gridIorion.Name = "gridIorion";
+            this.gridIorion.RowHeadersWidth = 51;
+            this.gridIorion.Size = new System.Drawing.Size(1612, 644);
+            this.gridIorion.TabIndex = 55;
+            this.gridIorion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridIorion_CellClick);
+            // 
+            // txtIorionToken
+            // 
+            this.txtIorionToken.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIorionToken.Location = new System.Drawing.Point(170, 25);
+            this.txtIorionToken.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIorionToken.Name = "txtIorionToken";
+            this.txtIorionToken.Size = new System.Drawing.Size(387, 30);
+            this.txtIorionToken.TabIndex = 54;
+            // 
+            // label118
+            // 
+            this.label118.AutoSize = true;
+            this.label118.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label118.Location = new System.Drawing.Point(14, 29);
+            this.label118.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label118.Name = "label118";
+            this.label118.Size = new System.Drawing.Size(82, 25);
+            this.label118.TabIndex = 53;
+            this.label118.Text = "TOKEN";
+            // 
+            // btnIorion9Parar
+            // 
+            this.btnIorion9Parar.Enabled = false;
+            this.btnIorion9Parar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIorion9Parar.Location = new System.Drawing.Point(1399, 88);
+            this.btnIorion9Parar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIorion9Parar.Name = "btnIorion9Parar";
+            this.btnIorion9Parar.Size = new System.Drawing.Size(228, 48);
+            this.btnIorion9Parar.TabIndex = 52;
+            this.btnIorion9Parar.Text = "Parar";
+            this.btnIorion9Parar.UseVisualStyleBackColor = true;
+            this.btnIorion9Parar.Click += new System.EventHandler(this.btnIorion9Parar_Click);
+            // 
+            // btnIorionIniciar
+            // 
+            this.btnIorionIniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIorionIniciar.Location = new System.Drawing.Point(1399, 25);
+            this.btnIorionIniciar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIorionIniciar.Name = "btnIorionIniciar";
+            this.btnIorionIniciar.Size = new System.Drawing.Size(228, 48);
+            this.btnIorionIniciar.TabIndex = 51;
+            this.btnIorionIniciar.Text = "Iniciar";
+            this.btnIorionIniciar.UseVisualStyleBackColor = true;
+            this.btnIorionIniciar.Click += new System.EventHandler(this.btnIorionIniciar_Click);
             // 
             // tabPageJotaJa
             // 
@@ -7020,123 +7350,168 @@
             this.gridWoocommerce.TabIndex = 37;
             this.gridWoocommerce.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridWoocommerce_CellClick);
             // 
-            // tabPageIorion19
+            // txtFixeCRMToken
             // 
-            this.tabPageIorion19.Controls.Add(this.btnIorionCancelar);
-            this.tabPageIorion19.Controls.Add(this.txtIorionURL);
-            this.tabPageIorion19.Controls.Add(this.label117);
-            this.tabPageIorion19.Controls.Add(this.btnIorionStatus);
-            this.tabPageIorion19.Controls.Add(this.gridIorion);
-            this.tabPageIorion19.Controls.Add(this.txtIorionToken);
-            this.tabPageIorion19.Controls.Add(this.label118);
-            this.tabPageIorion19.Controls.Add(this.btnIorion9Parar);
-            this.tabPageIorion19.Controls.Add(this.btnIorionIniciar);
-            this.tabPageIorion19.Location = new System.Drawing.Point(4, 25);
-            this.tabPageIorion19.Name = "tabPageIorion19";
-            this.tabPageIorion19.Size = new System.Drawing.Size(1641, 846);
-            this.tabPageIorion19.TabIndex = 33;
-            this.tabPageIorion19.Text = "Iorion19";
-            this.tabPageIorion19.UseVisualStyleBackColor = true;
+            this.txtFixeCRMToken.Enabled = false;
+            this.txtFixeCRMToken.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFixeCRMToken.Location = new System.Drawing.Point(528, 275);
+            this.txtFixeCRMToken.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFixeCRMToken.Name = "txtFixeCRMToken";
+            this.txtFixeCRMToken.Size = new System.Drawing.Size(700, 30);
+            this.txtFixeCRMToken.TabIndex = 39;
             // 
-            // txtIorionURL
+            // txtFixeCRMIdPassbook
             // 
-            this.txtIorionURL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIorionURL.Location = new System.Drawing.Point(859, 25);
-            this.txtIorionURL.Margin = new System.Windows.Forms.Padding(4);
-            this.txtIorionURL.Name = "txtIorionURL";
-            this.txtIorionURL.Size = new System.Drawing.Size(387, 30);
-            this.txtIorionURL.TabIndex = 58;
+            this.txtFixeCRMIdPassbook.Enabled = false;
+            this.txtFixeCRMIdPassbook.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFixeCRMIdPassbook.Location = new System.Drawing.Point(528, 337);
+            this.txtFixeCRMIdPassbook.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFixeCRMIdPassbook.Name = "txtFixeCRMIdPassbook";
+            this.txtFixeCRMIdPassbook.Size = new System.Drawing.Size(310, 30);
+            this.txtFixeCRMIdPassbook.TabIndex = 40;
             // 
-            // label117
+            // btnFixeCRMConsultarSelo
             // 
-            this.label117.AutoSize = true;
-            this.label117.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label117.Location = new System.Drawing.Point(703, 29);
-            this.label117.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label117.Name = "label117";
-            this.label117.Size = new System.Drawing.Size(50, 25);
-            this.label117.TabIndex = 57;
-            this.label117.Text = "URL";
+            this.btnFixeCRMConsultarSelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFixeCRMConsultarSelo.Location = new System.Drawing.Point(740, 432);
+            this.btnFixeCRMConsultarSelo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFixeCRMConsultarSelo.Name = "btnFixeCRMConsultarSelo";
+            this.btnFixeCRMConsultarSelo.Size = new System.Drawing.Size(193, 41);
+            this.btnFixeCRMConsultarSelo.TabIndex = 41;
+            this.btnFixeCRMConsultarSelo.Text = "Consultar Selo";
+            this.btnFixeCRMConsultarSelo.UseVisualStyleBackColor = true;
+            this.btnFixeCRMConsultarSelo.Click += new System.EventHandler(this.btnFixeCRMConsultarSelo_Click);
             // 
-            // btnIorionStatus
+            // txtFixeCRMIdUser
             // 
-            this.btnIorionStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIorionStatus.Location = new System.Drawing.Point(19, 123);
-            this.btnIorionStatus.Margin = new System.Windows.Forms.Padding(4);
-            this.btnIorionStatus.Name = "btnIorionStatus";
-            this.btnIorionStatus.Size = new System.Drawing.Size(228, 48);
-            this.btnIorionStatus.TabIndex = 56;
-            this.btnIorionStatus.Text = "Status";
-            this.btnIorionStatus.UseVisualStyleBackColor = true;
-            this.btnIorionStatus.Click += new System.EventHandler(this.btnIorionStatus_Click);
+            this.txtFixeCRMIdUser.Enabled = false;
+            this.txtFixeCRMIdUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFixeCRMIdUser.Location = new System.Drawing.Point(918, 337);
+            this.txtFixeCRMIdUser.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFixeCRMIdUser.Name = "txtFixeCRMIdUser";
+            this.txtFixeCRMIdUser.Size = new System.Drawing.Size(310, 30);
+            this.txtFixeCRMIdUser.TabIndex = 42;
             // 
-            // gridIorion
+            // btnFixeCRMPontos
             // 
-            this.gridIorion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridIorion.Location = new System.Drawing.Point(15, 178);
-            this.gridIorion.Margin = new System.Windows.Forms.Padding(4);
-            this.gridIorion.Name = "gridIorion";
-            this.gridIorion.RowHeadersWidth = 51;
-            this.gridIorion.Size = new System.Drawing.Size(1612, 644);
-            this.gridIorion.TabIndex = 55;
-            this.gridIorion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridIorion_CellClick);
+            this.btnFixeCRMPontos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFixeCRMPontos.Location = new System.Drawing.Point(941, 432);
+            this.btnFixeCRMPontos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFixeCRMPontos.Name = "btnFixeCRMPontos";
+            this.btnFixeCRMPontos.Size = new System.Drawing.Size(359, 41);
+            this.btnFixeCRMPontos.TabIndex = 43;
+            this.btnFixeCRMPontos.Text = "Enviar Selos/Pontos/Cashback";
+            this.btnFixeCRMPontos.UseVisualStyleBackColor = true;
+            this.btnFixeCRMPontos.Click += new System.EventHandler(this.btnFixeCRMPontos_Click);
             // 
-            // txtIorionToken
+            // btnFixeCRMResgatar
             // 
-            this.txtIorionToken.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIorionToken.Location = new System.Drawing.Point(170, 25);
-            this.txtIorionToken.Margin = new System.Windows.Forms.Padding(4);
-            this.txtIorionToken.Name = "txtIorionToken";
-            this.txtIorionToken.Size = new System.Drawing.Size(387, 30);
-            this.txtIorionToken.TabIndex = 54;
+            this.btnFixeCRMResgatar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFixeCRMResgatar.Location = new System.Drawing.Point(1308, 432);
+            this.btnFixeCRMResgatar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFixeCRMResgatar.Name = "btnFixeCRMResgatar";
+            this.btnFixeCRMResgatar.Size = new System.Drawing.Size(249, 41);
+            this.btnFixeCRMResgatar.TabIndex = 44;
+            this.btnFixeCRMResgatar.Text = "Resgatar";
+            this.btnFixeCRMResgatar.UseVisualStyleBackColor = true;
+            this.btnFixeCRMResgatar.Click += new System.EventHandler(this.btnFixeCRMResgatar_Click);
             // 
-            // label118
+            // tabPageSelfBuyMe
             // 
-            this.label118.AutoSize = true;
-            this.label118.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label118.Location = new System.Drawing.Point(14, 29);
-            this.label118.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label118.Name = "label118";
-            this.label118.Size = new System.Drawing.Size(82, 25);
-            this.label118.TabIndex = 53;
-            this.label118.Text = "TOKEN";
+            this.tabPageSelfBuyMe.Controls.Add(this.btnSelfBuyMeMarkRead);
+            this.tabPageSelfBuyMe.Controls.Add(this.btnSelfBuyMePointSalesGroup);
+            this.tabPageSelfBuyMe.Controls.Add(this.btnSelfBuyMePointSales);
+            this.tabPageSelfBuyMe.Controls.Add(this.btnSelfBuyMeOrder);
+            this.tabPageSelfBuyMe.Controls.Add(this.btnSelfBuyMeOrders);
+            this.tabPageSelfBuyMe.Controls.Add(this.txtSelfBuyMeToken);
+            this.tabPageSelfBuyMe.Controls.Add(this.label123);
+            this.tabPageSelfBuyMe.Location = new System.Drawing.Point(4, 25);
+            this.tabPageSelfBuyMe.Name = "tabPageSelfBuyMe";
+            this.tabPageSelfBuyMe.Size = new System.Drawing.Size(1641, 846);
+            this.tabPageSelfBuyMe.TabIndex = 37;
+            this.tabPageSelfBuyMe.Text = "SelfBuy Me";
+            this.tabPageSelfBuyMe.UseVisualStyleBackColor = true;
             // 
-            // btnIorion9Parar
+            // btnSelfBuyMeOrders
             // 
-            this.btnIorion9Parar.Enabled = false;
-            this.btnIorion9Parar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIorion9Parar.Location = new System.Drawing.Point(1399, 88);
-            this.btnIorion9Parar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnIorion9Parar.Name = "btnIorion9Parar";
-            this.btnIorion9Parar.Size = new System.Drawing.Size(228, 48);
-            this.btnIorion9Parar.TabIndex = 52;
-            this.btnIorion9Parar.Text = "Parar";
-            this.btnIorion9Parar.UseVisualStyleBackColor = true;
-            this.btnIorion9Parar.Click += new System.EventHandler(this.btnIorion9Parar_Click);
+            this.btnSelfBuyMeOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelfBuyMeOrders.Location = new System.Drawing.Point(586, 376);
+            this.btnSelfBuyMeOrders.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSelfBuyMeOrders.Name = "btnSelfBuyMeOrders";
+            this.btnSelfBuyMeOrders.Size = new System.Drawing.Size(193, 41);
+            this.btnSelfBuyMeOrders.TabIndex = 41;
+            this.btnSelfBuyMeOrders.Text = "Orders";
+            this.btnSelfBuyMeOrders.UseVisualStyleBackColor = true;
+            this.btnSelfBuyMeOrders.Click += new System.EventHandler(this.btnSelfBuyMeOrders_Click);
             // 
-            // btnIorionIniciar
+            // txtSelfBuyMeToken
             // 
-            this.btnIorionIniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIorionIniciar.Location = new System.Drawing.Point(1399, 25);
-            this.btnIorionIniciar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnIorionIniciar.Name = "btnIorionIniciar";
-            this.btnIorionIniciar.Size = new System.Drawing.Size(228, 48);
-            this.btnIorionIniciar.TabIndex = 51;
-            this.btnIorionIniciar.Text = "Iniciar";
-            this.btnIorionIniciar.UseVisualStyleBackColor = true;
-            this.btnIorionIniciar.Click += new System.EventHandler(this.btnIorionIniciar_Click);
+            this.txtSelfBuyMeToken.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSelfBuyMeToken.Location = new System.Drawing.Point(714, 267);
+            this.txtSelfBuyMeToken.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSelfBuyMeToken.Name = "txtSelfBuyMeToken";
+            this.txtSelfBuyMeToken.Size = new System.Drawing.Size(650, 30);
+            this.txtSelfBuyMeToken.TabIndex = 40;
+            this.txtSelfBuyMeToken.Text = "1|me2-selfhFl4Lq78pamNButSbJ6AkxjzMOyymiPhOSGlWYeSd66325bb";
             // 
-            // btnIorionCancelar
+            // label123
             // 
-            this.btnIorionCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIorionCancelar.Location = new System.Drawing.Point(706, 399);
-            this.btnIorionCancelar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnIorionCancelar.Name = "btnIorionCancelar";
-            this.btnIorionCancelar.Size = new System.Drawing.Size(228, 48);
-            this.btnIorionCancelar.TabIndex = 59;
-            this.btnIorionCancelar.Text = "Cancelar";
-            this.btnIorionCancelar.UseVisualStyleBackColor = true;
-            this.btnIorionCancelar.Click += new System.EventHandler(this.btnIorionCancelar_Click);
+            this.label123.AutoSize = true;
+            this.label123.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label123.Location = new System.Drawing.Point(590, 271);
+            this.label123.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label123.Name = "label123";
+            this.label123.Size = new System.Drawing.Size(85, 31);
+            this.label123.TabIndex = 39;
+            this.label123.Text = "Token";
+            // 
+            // btnSelfBuyMeOrder
+            // 
+            this.btnSelfBuyMeOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelfBuyMeOrder.Location = new System.Drawing.Point(787, 376);
+            this.btnSelfBuyMeOrder.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSelfBuyMeOrder.Name = "btnSelfBuyMeOrder";
+            this.btnSelfBuyMeOrder.Size = new System.Drawing.Size(193, 41);
+            this.btnSelfBuyMeOrder.TabIndex = 42;
+            this.btnSelfBuyMeOrder.Text = "Order";
+            this.btnSelfBuyMeOrder.UseVisualStyleBackColor = true;
+            this.btnSelfBuyMeOrder.Click += new System.EventHandler(this.btnSelfBuyMeOrder_Click);
+            // 
+            // btnSelfBuyMePointSales
+            // 
+            this.btnSelfBuyMePointSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelfBuyMePointSales.Location = new System.Drawing.Point(988, 376);
+            this.btnSelfBuyMePointSales.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSelfBuyMePointSales.Name = "btnSelfBuyMePointSales";
+            this.btnSelfBuyMePointSales.Size = new System.Drawing.Size(193, 41);
+            this.btnSelfBuyMePointSales.TabIndex = 43;
+            this.btnSelfBuyMePointSales.Text = "Point Sales";
+            this.btnSelfBuyMePointSales.UseVisualStyleBackColor = true;
+            this.btnSelfBuyMePointSales.Click += new System.EventHandler(this.btnSelfBuyMePointSales_Click);
+            // 
+            // btnSelfBuyMePointSalesGroup
+            // 
+            this.btnSelfBuyMePointSalesGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelfBuyMePointSalesGroup.Location = new System.Drawing.Point(1189, 376);
+            this.btnSelfBuyMePointSalesGroup.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSelfBuyMePointSalesGroup.Name = "btnSelfBuyMePointSalesGroup";
+            this.btnSelfBuyMePointSalesGroup.Size = new System.Drawing.Size(193, 41);
+            this.btnSelfBuyMePointSalesGroup.TabIndex = 44;
+            this.btnSelfBuyMePointSalesGroup.Text = "Point Sales Group";
+            this.btnSelfBuyMePointSalesGroup.UseVisualStyleBackColor = true;
+            this.btnSelfBuyMePointSalesGroup.Click += new System.EventHandler(this.btnSelfBuyMePointSalesGroup_Click);
+            // 
+            // btnSelfBuyMeMarkRead
+            // 
+            this.btnSelfBuyMeMarkRead.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelfBuyMeMarkRead.Location = new System.Drawing.Point(1390, 376);
+            this.btnSelfBuyMeMarkRead.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSelfBuyMeMarkRead.Name = "btnSelfBuyMeMarkRead";
+            this.btnSelfBuyMeMarkRead.Size = new System.Drawing.Size(193, 41);
+            this.btnSelfBuyMeMarkRead.TabIndex = 45;
+            this.btnSelfBuyMeMarkRead.Text = "Mark Read";
+            this.btnSelfBuyMeMarkRead.UseVisualStyleBackColor = true;
+            this.btnSelfBuyMeMarkRead.Click += new System.EventHandler(this.btnSelfBuyMeMarkRead_Click);
             // 
             // Form1
             // 
@@ -7161,6 +7536,8 @@
             this.tabPageAipedi.ResumeLayout(false);
             this.tabPageAipedi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridPedreiroDigital)).EndInit();
+            this.tabAgilizone.ResumeLayout(false);
+            this.tabAgilizone.PerformLayout();
             this.tabPageAmericanas.ResumeLayout(false);
             this.tabPageAmericanas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridAmericanas)).EndInit();
@@ -7193,6 +7570,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridEpadoca)).EndInit();
             this.tabPageEuFalo.ResumeLayout(false);
             this.tabPageEuFalo.PerformLayout();
+            this.tabPageFixeCRM.ResumeLayout(false);
+            this.tabPageFixeCRM.PerformLayout();
             this.tabPageIfood.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage21.ResumeLayout(false);
@@ -7209,6 +7588,9 @@
             this.tabPageIDelivery.ResumeLayout(false);
             this.tabPageIDelivery.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridiDelivery)).EndInit();
+            this.tabPageIorion19.ResumeLayout(false);
+            this.tabPageIorion19.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridIorion)).EndInit();
             this.tabPageJotaJa.ResumeLayout(false);
             this.tabPageJotaJa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridJotaJa)).EndInit();
@@ -7250,9 +7632,8 @@
             this.tabPageWoocommerce.ResumeLayout(false);
             this.tabPageWoocommerce.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridWoocommerce)).EndInit();
-            this.tabPageIorion19.ResumeLayout(false);
-            this.tabPageIorion19.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridIorion)).EndInit();
+            this.tabPageSelfBuyMe.ResumeLayout(false);
+            this.tabPageSelfBuyMe.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -7798,6 +8179,35 @@
         private System.Windows.Forms.Label label118;
         private System.Windows.Forms.Button btnIorion9Parar;
         private System.Windows.Forms.Button btnIorionIniciar;
+        private System.Windows.Forms.TabPage tabAgilizone;
+        private System.Windows.Forms.Button btnAgilizoneOrder;
+        private System.Windows.Forms.Button btnAgilizoneToken;
+        private System.Windows.Forms.TextBox txtAgilizoneClientSecret;
+        private System.Windows.Forms.Label label119;
+        private System.Windows.Forms.TextBox txtAgilizoneClientID;
+        private System.Windows.Forms.Label label120;
+        private System.Windows.Forms.TextBox txtAgilizoneToken;
+        private System.Windows.Forms.TabPage tabPageFidelizi;
+        private System.Windows.Forms.TabPage tabPageFixeCRM;
+        private System.Windows.Forms.Button btnFixeCRMLogin;
+        private System.Windows.Forms.TextBox txtFixeCRMSenha;
+        private System.Windows.Forms.Label label121;
+        private System.Windows.Forms.TextBox txtFixeCRMUsuario;
+        private System.Windows.Forms.Label label122;
+        private System.Windows.Forms.TextBox txtFixeCRMToken;
+        private System.Windows.Forms.TextBox txtFixeCRMIdPassbook;
+        private System.Windows.Forms.Button btnFixeCRMConsultarSelo;
+        private System.Windows.Forms.TextBox txtFixeCRMIdUser;
+        private System.Windows.Forms.Button btnFixeCRMPontos;
+        private System.Windows.Forms.Button btnFixeCRMResgatar;
+        private System.Windows.Forms.TabPage tabPageSelfBuyMe;
+        private System.Windows.Forms.Button btnSelfBuyMeOrders;
+        private System.Windows.Forms.TextBox txtSelfBuyMeToken;
+        private System.Windows.Forms.Label label123;
+        private System.Windows.Forms.Button btnSelfBuyMeOrder;
+        private System.Windows.Forms.Button btnSelfBuyMePointSales;
+        private System.Windows.Forms.Button btnSelfBuyMePointSalesGroup;
+        private System.Windows.Forms.Button btnSelfBuyMeMarkRead;
     }
 }
 
