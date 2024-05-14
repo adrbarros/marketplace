@@ -41,6 +41,9 @@ using Iorion19.Service;
 using Agilizone.Service;
 using FixeCRM.Domain;
 using SelfBuyMe.Service;
+using Fidelizi.Service;
+using Plug4Sales.Service;
+using CardapioWeb.Service;
 
 namespace Example
 {
@@ -137,6 +140,9 @@ namespace Example
 
         private List<Iorion19.Domain.pedido> _iorion9Orders { get; set; }
         private string _iorion19Id { get; set; }
+
+        private List<CardapioWeb.Domain.responseOrders> _cardapioWebOrders { get; set; }
+        private string _cardapioWebId { get; set; }
 
         #endregion
 
@@ -1118,7 +1124,7 @@ namespace Example
             item1.quantity = 1;
             item1.cod = "1";
             item1.seq = 1;
-            item1.observation = "com gelo";
+            item1.obs = "com gelo";
             pedido.items.Add(item1);
 
             var item2 = new Logaroo.Domain.orderitem();
@@ -1126,7 +1132,7 @@ namespace Example
             item2.quantity = 2;
             item2.cod = "2";
             item2.seq = 2;
-            item2.observation = "";
+            item2.obs = "";
             pedido.items.Add(item2);
 
             pedido.lat = "-3.82660311645193";
@@ -6757,15 +6763,15 @@ namespace Example
                 return;
             }
 
-            //var logarooService = new Logaroo.Service.LogarooService(_urlLogarooDesenvolvimento);
-            var logarooService = new Logaroo.Service.LogarooService();
+            var logarooService = new Logaroo.Service.LogarooService(_urlLogarooDesenvolvimento);
+            //var logarooService = new Logaroo.Service.LogarooService();
             var result = logarooService.MercadooOrdersPendentes(txtLogarooToken.Text, txtLogarooMerchantId.Text);
             if (result.Success)
             {
                 foreach (var pedido in result.Result.data.items)
                 {
                     var resultPedidoDetalhe = logarooService.MercadooOrder(txtLogarooToken.Text, pedido.id.ToString());
-                    var resultPedidoModerar = logarooService.MercadooOrderModerar(txtLogarooToken.Text, pedido.id.ToString(), true);
+                    //var resultPedidoModerar = logarooService.MercadooOrderModerar(txtLogarooToken.Text, pedido.id.ToString(), true);
                 }
 
                 gridLogaroo.DataSource = result.Result.data.items;
@@ -7751,7 +7757,7 @@ namespace Example
             var result = service.AddPoints(txtFixeCRMToken.Text, point);
             if (result.Success)
             {
-                if(result.Result.status == FixeCRM.Enum.Status.OK)
+                if (result.Result.status == FixeCRM.Enum.Status.OK)
                 {
                     MessageBox.Show("OK");
                 }
@@ -7804,7 +7810,7 @@ namespace Example
         {
             var service = new SelfBuyMeService();
             var result = service.Orders(txtSelfBuyMeToken.Text, "");
-            if(result.Success)
+            if (result.Success)
             {
 
             }
@@ -7813,8 +7819,6 @@ namespace Example
                 MessageBox.Show(result.Message);
             }
         }
-
-        #endregion
 
         private void btnSelfBuyMeOrder_Click(object sender, EventArgs e)
         {
@@ -7873,6 +7877,237 @@ namespace Example
                 MessageBox.Show(result.Message);
             }
         }
+
+        #endregion
+
+        #region Fidelizi
+
+        private const string FidelizUrlTeste = "https://sandbox.fidelizii.com.br/v3/";
+
+        private void btnFideliziConfiguracoes_Click(object sender, EventArgs e)
+        {
+            var service = new FideliziService(txtFideliziAppTokenn.Text, txtFideliziAccessToken.Text, FidelizUrlTeste);
+            service.GetConfiguracoes();
+        }
+
+        #endregion
+
+        #region Plug4Sales
+        private void btnPlug4SalesToken_Click(object sender, EventArgs e)
+        {
+            var service = new Plug4SalesService();
+            var result = service.Token(txtPlug4SalesClientId.Text, txtPlug4SalesClientSecret.Text);
+            if (result.Success)
+            {
+                if (result.Result.success)
+                {
+                    txtPlug4SalesTokenGerado.Text = result.Result.result.token;
+                }
+                else
+                {
+                    MessageBox.Show(result.Result.error);
+                }
+            }
+            else
+            {
+                MessageBox.Show(result.Message);
+            }
+        }
+
+        private void txtPlug4Sales_Click(object sender, EventArgs e)
+        {
+            var pedidos = new List<Plug4Sales.Domain.order>();
+            var pedido = new Plug4Sales.Domain.order();
+            pedido.id = Guid.NewGuid().ToString();
+            pedido.displayId = DateTime.Now.ToString("yyyyMMddHHmmss");
+            pedido.createdAt = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss");
+            pedido.preparationStartDateTime = DateTime.Now.AddMinutes(40).ToString("yyyy-MM-ddTHH:mm:ss");
+
+            pedido.merchant = new Plug4Sales.Domain.merchant();
+            pedido.merchant.id = Guid.NewGuid().ToString();
+            pedido.merchant.name = "IzzyWay";
+
+            pedido.customer = new Plug4Sales.Domain.customer();
+            pedido.customer.id = Guid.NewGuid().ToString();
+            pedido.customer.name = "Henrique";
+            pedido.customer.phone = new Plug4Sales.Domain.customer_phone();
+            pedido.customer.phone.number = "987704779";
+            pedido.customer.phone.extension = "85";
+
+            pedido.delivery = new Plug4Sales.Domain.delivery();
+            pedido.delivery.deliveredBy = "MERCHANT";
+            pedido.delivery.deliveryAddress = new Plug4Sales.Domain.deliveryAddress();
+            pedido.delivery.deliveryAddress.state = "SP";
+            pedido.delivery.deliveryAddress.city = "São Paulo";
+            pedido.delivery.deliveryAddress.district = "Moema";
+            pedido.delivery.deliveryAddress.street = "Plaza Avenue";
+            pedido.delivery.deliveryAddress.number = "100";
+            pedido.delivery.deliveryAddress.complement = "BL 02 AP 31";
+            pedido.delivery.deliveryAddress.reference = "Yellow House";
+            pedido.delivery.deliveryAddress.formattedAddress = "Plaza Avenue, 100, BL 02 AP 31, Moema - São Paulo, SP - Brazil";
+            pedido.delivery.deliveryAddress.postalCode = "20111-000";
+
+            var item = new Plug4Sales.Domain.item();
+            item.id = Guid.NewGuid().ToString();
+            item.name = "Pizza";
+            item.unit = "UN";
+            item.quantity = 1;
+            item.unitPrice = new Plug4Sales.Domain.values(30);
+            item.totalPrice = new Plug4Sales.Domain.values(30);
+
+            var option = new Plug4Sales.Domain.option();
+            option.id = Guid.NewGuid().ToString();
+            option.name = "Cebola";
+            option.unit = "UN";
+            option.quantity = 1;
+            option.unitPrice = new Plug4Sales.Domain.values(5);
+            option.totalPrice = new Plug4Sales.Domain.values(5);
+
+            item.options.Add(option);
+
+            pedido.total = new Plug4Sales.Domain.total();
+            pedido.total.itemsPrice = new Plug4Sales.Domain.values(30);
+            pedido.total.otherFees = new Plug4Sales.Domain.values(10);
+            pedido.total.discount = new Plug4Sales.Domain.values(5);
+            pedido.total.orderAmount = new Plug4Sales.Domain.values(35);
+
+
+            pedidos.Add(pedido);
+
+            var service = new Plug4SalesService();
+            var result = service.Orders(txtPlug4SalesTokenGerado.Text, pedidos);
+            if (result.Success)
+            {
+                if (result.Result.success)
+                {
+                    MessageBox.Show(result.Result.result);
+                }
+                else
+                {
+                    MessageBox.Show(result.Result.error);
+                }
+            }
+            else
+            {
+                MessageBox.Show(result.Message);
+            }
+        }
+
+        #endregion
+
+        #region Cardápio Web
+
+        private const string UrlCardapioWebSandBox = "https://integracao.sandbox.cardapioweb.com/";
+
+        private async void btnCardapioWebIniciar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtCardapioWebToken.Text))
+            {
+                MessageBox.Show("Campo Token Obrigatório");
+                return;
+            }
+
+            txtCardapioWebToken.Enabled = false;
+
+            btnCardapioWebIniciar.Enabled = false;
+            btnCardapioWebParar.Enabled = true;
+            await Task.Run(() => cardapioWeb());
+        }
+
+        private void cardapioWeb()
+        {
+            var service = new CardapioWebService(txtCardapioWebToken.Text, UrlCardapioWebSandBox);
+
+            try
+            {
+                //while (btnIorion9Parar.Enabled)
+                //{
+                var orderResult = service.Orders();
+                if (orderResult.Success)
+                {
+                    _cardapioWebOrders = orderResult.Result.Where(w => w.status == CardapioWeb.Enum.OrderStatus.WAITING_CONFIRMATION).ToList();
+
+                    WriteGridCardapioWeb();
+                }
+                else
+                {
+                    MessageBox.Show(orderResult.Message);
+                    return;
+                }
+
+                //Thread.Sleep(30000);
+                //}
+            }
+            catch (Exception ex)
+            {
+                var message = ex.Message;
+                if (ex.InnerException != null)
+                    message = ex.InnerException.Message;
+
+                MessageBox.Show(message);
+            }
+        }
+
+        private delegate void WritelstGridCardapioWebDelegate();
+        private void WriteGridCardapioWeb()
+        {
+            if (gridCardapioWeb.InvokeRequired)
+            {
+                var d = new WritelstGridCardapioWebDelegate(WriteGridCardapioWeb);
+                Invoke(d, new object[] { });
+            }
+            else
+            {
+                gridCardapioWeb.DataSource = _cardapioWebOrders.ToList();
+                gridCardapioWeb.Refresh();
+            }
+        }
+
+        private void btnCardapioWebParar_Click(object sender, EventArgs e)
+        {
+            txtCardapioWebToken.Enabled = true;
+
+            btnCardapioWebIniciar.Enabled = true;
+            btnCardapioWebParar.Enabled = false;
+        }
+
+        private void gridCardapioWeb_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1 && e.RowIndex < gridCardapioWeb.Rows.Count)
+            {
+                _cardapioWebId = gridCardapioWeb.Rows[e.RowIndex].Cells[0].Value.ToString();
+            }
+        }
+
+        private void btnCardapioWebPedido_Click(object sender, EventArgs e)
+        {
+            if(!string.IsNullOrEmpty(_cardapioWebId))
+            {
+                var service = new CardapioWebService(txtCardapioWebToken.Text, UrlCardapioWebSandBox);
+                var result = service.Order(_cardapioWebId);
+            }
+            else
+            {
+                MessageBox.Show("Selecione o pedido");
+            }
+        }
+
+        private void btnCardapioDigitalAceito_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(_cardapioWebId))
+            {
+                var service = new CardapioWebService(txtCardapioWebToken.Text, UrlCardapioWebSandBox);
+                var result = service.Confirm(_cardapioWebId);
+            }
+            else
+            {
+                MessageBox.Show("Selecione o pedido");
+            }
+        }
+
+        #endregion
+
+
     }
 }
 
