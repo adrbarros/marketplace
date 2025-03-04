@@ -30,6 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btn = new System.Windows.Forms.TabControl();
+            this.tabPageVMarket = new System.Windows.Forms.TabPage();
+            this.gridVMarket = new System.Windows.Forms.DataGridView();
+            this.btnVMarketBuscarPedido = new System.Windows.Forms.Button();
+            this.btnVMarketBuscarPedidos = new System.Windows.Forms.Button();
+            this.txtVMarketToken = new System.Windows.Forms.TextBox();
+            this.btnVMarketGerarToken = new System.Windows.Forms.Button();
+            this.label134 = new System.Windows.Forms.Label();
+            this.txtVMarketSenha = new System.Windows.Forms.TextBox();
+            this.label135 = new System.Windows.Forms.Label();
+            this.txtVMarketEmail = new System.Windows.Forms.TextBox();
             this.tabPageDegustAi = new System.Windows.Forms.TabPage();
             this.btnDegustaAiResumoUsuario = new System.Windows.Forms.Button();
             this.btnDegustaAiRegastaPremio = new System.Windows.Forms.Button();
@@ -687,6 +697,8 @@
             this.btnBigFishParar = new System.Windows.Forms.Button();
             this.btnBigFishIniciar = new System.Windows.Forms.Button();
             this.btn.SuspendLayout();
+            this.tabPageVMarket.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridVMarket)).BeginInit();
             this.tabPageDegustAi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridIorion)).BeginInit();
             this.tabPageWedo.SuspendLayout();
@@ -771,6 +783,7 @@
             // 
             // btn
             // 
+            this.btn.Controls.Add(this.tabPageVMarket);
             this.btn.Controls.Add(this.tabPageDegustAi);
             this.btn.Controls.Add(this.tabPageWedo);
             this.btn.Controls.Add(this.tabPageAccon);
@@ -821,6 +834,116 @@
             this.btn.Size = new System.Drawing.Size(1239, 711);
             this.btn.TabIndex = 0;
             // 
+            // tabPageVMarket
+            // 
+            this.tabPageVMarket.Controls.Add(this.gridVMarket);
+            this.tabPageVMarket.Controls.Add(this.btnVMarketBuscarPedido);
+            this.tabPageVMarket.Controls.Add(this.btnVMarketBuscarPedidos);
+            this.tabPageVMarket.Controls.Add(this.txtVMarketToken);
+            this.tabPageVMarket.Controls.Add(this.btnVMarketGerarToken);
+            this.tabPageVMarket.Controls.Add(this.label134);
+            this.tabPageVMarket.Controls.Add(this.txtVMarketSenha);
+            this.tabPageVMarket.Controls.Add(this.label135);
+            this.tabPageVMarket.Controls.Add(this.txtVMarketEmail);
+            this.tabPageVMarket.Location = new System.Drawing.Point(4, 22);
+            this.tabPageVMarket.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageVMarket.Name = "tabPageVMarket";
+            this.tabPageVMarket.Size = new System.Drawing.Size(1231, 685);
+            this.tabPageVMarket.TabIndex = 43;
+            this.tabPageVMarket.Text = "VMarket";
+            this.tabPageVMarket.UseVisualStyleBackColor = true;
+            // 
+            // gridVMarket
+            // 
+            this.gridVMarket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridVMarket.Location = new System.Drawing.Point(21, 33);
+            this.gridVMarket.Name = "gridVMarket";
+            this.gridVMarket.RowHeadersWidth = 51;
+            this.gridVMarket.Size = new System.Drawing.Size(1209, 175);
+            this.gridVMarket.TabIndex = 74;
+            // 
+            // btnVMarketBuscarPedido
+            // 
+            this.btnVMarketBuscarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVMarketBuscarPedido.Location = new System.Drawing.Point(773, 447);
+            this.btnVMarketBuscarPedido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVMarketBuscarPedido.Name = "btnVMarketBuscarPedido";
+            this.btnVMarketBuscarPedido.Size = new System.Drawing.Size(155, 39);
+            this.btnVMarketBuscarPedido.TabIndex = 73;
+            this.btnVMarketBuscarPedido.Text = "Buscar Pedido";
+            this.btnVMarketBuscarPedido.UseVisualStyleBackColor = true;
+            this.btnVMarketBuscarPedido.Click += new System.EventHandler(this.btnVMarketBuscarPedido_Click);
+            // 
+            // btnVMarketBuscarPedidos
+            // 
+            this.btnVMarketBuscarPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVMarketBuscarPedidos.Location = new System.Drawing.Point(596, 447);
+            this.btnVMarketBuscarPedidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVMarketBuscarPedidos.Name = "btnVMarketBuscarPedidos";
+            this.btnVMarketBuscarPedidos.Size = new System.Drawing.Size(155, 39);
+            this.btnVMarketBuscarPedidos.TabIndex = 72;
+            this.btnVMarketBuscarPedidos.Text = "Buscar Pedidos";
+            this.btnVMarketBuscarPedidos.UseVisualStyleBackColor = true;
+            this.btnVMarketBuscarPedidos.Click += new System.EventHandler(this.btnVMarketBuscarPedidos_Click);
+            // 
+            // txtVMarketToken
+            // 
+            this.txtVMarketToken.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVMarketToken.Location = new System.Drawing.Point(870, 327);
+            this.txtVMarketToken.Name = "txtVMarketToken";
+            this.txtVMarketToken.Size = new System.Drawing.Size(291, 26);
+            this.txtVMarketToken.TabIndex = 71;
+            // 
+            // btnVMarketGerarToken
+            // 
+            this.btnVMarketGerarToken.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVMarketGerarToken.Location = new System.Drawing.Point(417, 447);
+            this.btnVMarketGerarToken.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVMarketGerarToken.Name = "btnVMarketGerarToken";
+            this.btnVMarketGerarToken.Size = new System.Drawing.Size(155, 39);
+            this.btnVMarketGerarToken.TabIndex = 70;
+            this.btnVMarketGerarToken.Text = "Gerar Token";
+            this.btnVMarketGerarToken.UseVisualStyleBackColor = true;
+            this.btnVMarketGerarToken.Click += new System.EventHandler(this.btnVMarketGerarToken_Click);
+            // 
+            // label134
+            // 
+            this.label134.AutoSize = true;
+            this.label134.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label134.Location = new System.Drawing.Point(413, 299);
+            this.label134.Name = "label134";
+            this.label134.Size = new System.Drawing.Size(65, 20);
+            this.label134.TabIndex = 69;
+            this.label134.Text = "SENHA";
+            // 
+            // txtVMarketSenha
+            // 
+            this.txtVMarketSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVMarketSenha.Location = new System.Drawing.Point(417, 327);
+            this.txtVMarketSenha.Name = "txtVMarketSenha";
+            this.txtVMarketSenha.Size = new System.Drawing.Size(291, 26);
+            this.txtVMarketSenha.TabIndex = 68;
+            this.txtVMarketSenha.Text = "102030@@";
+            // 
+            // label135
+            // 
+            this.label135.AutoSize = true;
+            this.label135.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label135.Location = new System.Drawing.Point(413, 230);
+            this.label135.Name = "label135";
+            this.label135.Size = new System.Drawing.Size(58, 20);
+            this.label135.TabIndex = 67;
+            this.label135.Text = "EMAIL";
+            // 
+            // txtVMarketEmail
+            // 
+            this.txtVMarketEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVMarketEmail.Location = new System.Drawing.Point(417, 258);
+            this.txtVMarketEmail.Name = "txtVMarketEmail";
+            this.txtVMarketEmail.Size = new System.Drawing.Size(291, 26);
+            this.txtVMarketEmail.TabIndex = 66;
+            this.txtVMarketEmail.Text = "barrashopping@kiwisucos.com.br";
+            // 
             // tabPageDegustAi
             // 
             this.tabPageDegustAi.Controls.Add(this.btnDegustaAiResumoUsuario);
@@ -842,7 +965,7 @@
             this.tabPageDegustAi.Controls.Add(this.btnIorion9Parar);
             this.tabPageDegustAi.Controls.Add(this.btnIorionIniciar);
             this.tabPageDegustAi.Location = new System.Drawing.Point(4, 22);
-            this.tabPageDegustAi.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPageDegustAi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageDegustAi.Name = "tabPageDegustAi";
             this.tabPageDegustAi.Size = new System.Drawing.Size(1231, 685);
             this.tabPageDegustAi.TabIndex = 33;
@@ -853,7 +976,7 @@
             // 
             this.btnDegustaAiResumoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDegustaAiResumoUsuario.Location = new System.Drawing.Point(732, 509);
-            this.btnDegustaAiResumoUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDegustaAiResumoUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDegustaAiResumoUsuario.Name = "btnDegustaAiResumoUsuario";
             this.btnDegustaAiResumoUsuario.Size = new System.Drawing.Size(155, 32);
             this.btnDegustaAiResumoUsuario.TabIndex = 68;
@@ -865,7 +988,7 @@
             // 
             this.btnDegustaAiRegastaPremio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDegustaAiRegastaPremio.Location = new System.Drawing.Point(531, 509);
-            this.btnDegustaAiRegastaPremio.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDegustaAiRegastaPremio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDegustaAiRegastaPremio.Name = "btnDegustaAiRegastaPremio";
             this.btnDegustaAiRegastaPremio.Size = new System.Drawing.Size(155, 32);
             this.btnDegustaAiRegastaPremio.TabIndex = 67;
@@ -877,7 +1000,7 @@
             // 
             this.btnDegustaAiConsultaPremio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDegustaAiConsultaPremio.Location = new System.Drawing.Point(732, 453);
-            this.btnDegustaAiConsultaPremio.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDegustaAiConsultaPremio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDegustaAiConsultaPremio.Name = "btnDegustaAiConsultaPremio";
             this.btnDegustaAiConsultaPremio.Size = new System.Drawing.Size(155, 32);
             this.btnDegustaAiConsultaPremio.TabIndex = 66;
@@ -889,7 +1012,7 @@
             // 
             this.btnDegustaAiGerarToken.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDegustaAiGerarToken.Location = new System.Drawing.Point(732, 391);
-            this.btnDegustaAiGerarToken.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDegustaAiGerarToken.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDegustaAiGerarToken.Name = "btnDegustaAiGerarToken";
             this.btnDegustaAiGerarToken.Size = new System.Drawing.Size(155, 39);
             this.btnDegustaAiGerarToken.TabIndex = 65;
@@ -937,7 +1060,7 @@
             // 
             this.btnDegustaAiRegistraPonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDegustaAiRegistraPonto.Location = new System.Drawing.Point(531, 453);
-            this.btnDegustaAiRegistraPonto.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDegustaAiRegistraPonto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDegustaAiRegistraPonto.Name = "btnDegustaAiRegistraPonto";
             this.btnDegustaAiRegistraPonto.Size = new System.Drawing.Size(155, 32);
             this.btnDegustaAiRegistraPonto.TabIndex = 60;
@@ -1048,7 +1171,7 @@
             this.tabPageWedo.Controls.Add(this.btnWedoParar);
             this.tabPageWedo.Controls.Add(this.btnWedoIniciar);
             this.tabPageWedo.Location = new System.Drawing.Point(4, 22);
-            this.tabPageWedo.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPageWedo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageWedo.Name = "tabPageWedo";
             this.tabPageWedo.Size = new System.Drawing.Size(1231, 685);
             this.tabPageWedo.TabIndex = 41;
@@ -1705,7 +1828,7 @@
             this.tabAgilizone.Controls.Add(this.txtAgilizoneClientID);
             this.tabAgilizone.Controls.Add(this.label120);
             this.tabAgilizone.Location = new System.Drawing.Point(4, 22);
-            this.tabAgilizone.Margin = new System.Windows.Forms.Padding(2);
+            this.tabAgilizone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabAgilizone.Name = "tabAgilizone";
             this.tabAgilizone.Size = new System.Drawing.Size(1231, 685);
             this.tabAgilizone.TabIndex = 34;
@@ -2454,7 +2577,7 @@
             this.tabPageCardapioWeb.Controls.Add(this.btnCardapioWebParar);
             this.tabPageCardapioWeb.Controls.Add(this.btnCardapioWebIniciar);
             this.tabPageCardapioWeb.Location = new System.Drawing.Point(4, 22);
-            this.tabPageCardapioWeb.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPageCardapioWeb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageCardapioWeb.Name = "tabPageCardapioWeb";
             this.tabPageCardapioWeb.Size = new System.Drawing.Size(1231, 685);
             this.tabPageCardapioWeb.TabIndex = 39;
@@ -3605,7 +3728,7 @@
             this.tabPageDeliveryVip.Controls.Add(this.btnDeliveryVipParar);
             this.tabPageDeliveryVip.Controls.Add(this.btnDeliveryVipIniciar);
             this.tabPageDeliveryVip.Location = new System.Drawing.Point(4, 22);
-            this.tabPageDeliveryVip.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPageDeliveryVip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageDeliveryVip.Name = "tabPageDeliveryVip";
             this.tabPageDeliveryVip.Size = new System.Drawing.Size(1231, 685);
             this.tabPageDeliveryVip.TabIndex = 40;
@@ -4006,7 +4129,7 @@
             this.tabPageEuFalo.Controls.Add(this.label114);
             this.tabPageEuFalo.Controls.Add(this.btnEuFaloLogin);
             this.tabPageEuFalo.Location = new System.Drawing.Point(4, 22);
-            this.tabPageEuFalo.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPageEuFalo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageEuFalo.Name = "tabPageEuFalo";
             this.tabPageEuFalo.Size = new System.Drawing.Size(1231, 685);
             this.tabPageEuFalo.TabIndex = 32;
@@ -4162,7 +4285,7 @@
             this.tabPageFidelizi.Controls.Add(this.label126);
             this.tabPageFidelizi.Controls.Add(this.btnFideliziConfiguracoes);
             this.tabPageFidelizi.Location = new System.Drawing.Point(4, 22);
-            this.tabPageFidelizi.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPageFidelizi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageFidelizi.Name = "tabPageFidelizi";
             this.tabPageFidelizi.Size = new System.Drawing.Size(1231, 685);
             this.tabPageFidelizi.TabIndex = 36;
@@ -4172,7 +4295,7 @@
             // btnFideliziAtendentes
             // 
             this.btnFideliziAtendentes.Location = new System.Drawing.Point(879, 589);
-            this.btnFideliziAtendentes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFideliziAtendentes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFideliziAtendentes.Name = "btnFideliziAtendentes";
             this.btnFideliziAtendentes.Size = new System.Drawing.Size(154, 38);
             this.btnFideliziAtendentes.TabIndex = 62;
@@ -4183,7 +4306,7 @@
             // btnFideliziClientePorCPF
             // 
             this.btnFideliziClientePorCPF.Location = new System.Drawing.Point(879, 503);
-            this.btnFideliziClientePorCPF.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFideliziClientePorCPF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFideliziClientePorCPF.Name = "btnFideliziClientePorCPF";
             this.btnFideliziClientePorCPF.Size = new System.Drawing.Size(154, 38);
             this.btnFideliziClientePorCPF.TabIndex = 61;
@@ -4194,7 +4317,7 @@
             // btnFideliziCadastrarCliente
             // 
             this.btnFideliziCadastrarCliente.Location = new System.Drawing.Point(879, 546);
-            this.btnFideliziCadastrarCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFideliziCadastrarCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFideliziCadastrarCliente.Name = "btnFideliziCadastrarCliente";
             this.btnFideliziCadastrarCliente.Size = new System.Drawing.Size(154, 38);
             this.btnFideliziCadastrarCliente.TabIndex = 60;
@@ -4205,7 +4328,7 @@
             // btnFideliziCliente
             // 
             this.btnFideliziCliente.Location = new System.Drawing.Point(879, 460);
-            this.btnFideliziCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFideliziCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFideliziCliente.Name = "btnFideliziCliente";
             this.btnFideliziCliente.Size = new System.Drawing.Size(154, 38);
             this.btnFideliziCliente.TabIndex = 59;
@@ -4216,7 +4339,7 @@
             // btnFideliziClientes
             // 
             this.btnFideliziClientes.Location = new System.Drawing.Point(879, 417);
-            this.btnFideliziClientes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFideliziClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFideliziClientes.Name = "btnFideliziClientes";
             this.btnFideliziClientes.Size = new System.Drawing.Size(154, 38);
             this.btnFideliziClientes.TabIndex = 58;
@@ -4227,7 +4350,7 @@
             // btnFideliziEstornar
             // 
             this.btnFideliziEstornar.Location = new System.Drawing.Point(879, 374);
-            this.btnFideliziEstornar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFideliziEstornar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFideliziEstornar.Name = "btnFideliziEstornar";
             this.btnFideliziEstornar.Size = new System.Drawing.Size(154, 38);
             this.btnFideliziEstornar.TabIndex = 57;
@@ -4238,7 +4361,7 @@
             // btnFideliziResgatar
             // 
             this.btnFideliziResgatar.Location = new System.Drawing.Point(879, 331);
-            this.btnFideliziResgatar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFideliziResgatar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFideliziResgatar.Name = "btnFideliziResgatar";
             this.btnFideliziResgatar.Size = new System.Drawing.Size(154, 38);
             this.btnFideliziResgatar.TabIndex = 56;
@@ -4249,7 +4372,7 @@
             // btnFideliziPontuar
             // 
             this.btnFideliziPontuar.Location = new System.Drawing.Point(879, 277);
-            this.btnFideliziPontuar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFideliziPontuar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFideliziPontuar.Name = "btnFideliziPontuar";
             this.btnFideliziPontuar.Size = new System.Drawing.Size(154, 39);
             this.btnFideliziPontuar.TabIndex = 55;
@@ -4341,7 +4464,7 @@
             this.tabPageFixeCRM.Controls.Add(this.txtFixeCRMUsuario);
             this.tabPageFixeCRM.Controls.Add(this.label122);
             this.tabPageFixeCRM.Location = new System.Drawing.Point(4, 22);
-            this.tabPageFixeCRM.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPageFixeCRM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageFixeCRM.Name = "tabPageFixeCRM";
             this.tabPageFixeCRM.Size = new System.Drawing.Size(1231, 685);
             this.tabPageFixeCRM.TabIndex = 35;
@@ -4475,7 +4598,7 @@
             this.tabPageIfood.Controls.Add(this.groupBox2);
             this.tabPageIfood.Location = new System.Drawing.Point(4, 22);
             this.tabPageIfood.Name = "tabPageIfood";
-            this.tabPageIfood.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageIfood.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPageIfood.Size = new System.Drawing.Size(1231, 685);
             this.tabPageIfood.TabIndex = 0;
             this.tabPageIfood.Text = "Ifood";
@@ -4517,7 +4640,7 @@
             this.tabPage21.Controls.Add(this.gridIfood);
             this.tabPage21.Location = new System.Drawing.Point(4, 22);
             this.tabPage21.Name = "tabPage21";
-            this.tabPage21.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage21.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPage21.Size = new System.Drawing.Size(1205, 435);
             this.tabPage21.TabIndex = 0;
             this.tabPage21.Text = "Pedidos";
@@ -4647,7 +4770,7 @@
             this.tabPage22.Controls.Add(this.btnIfoodVendas);
             this.tabPage22.Location = new System.Drawing.Point(4, 22);
             this.tabPage22.Name = "tabPage22";
-            this.tabPage22.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage22.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPage22.Size = new System.Drawing.Size(1205, 435);
             this.tabPage22.TabIndex = 1;
             this.tabPage22.Text = "Financeiro";
@@ -4904,7 +5027,7 @@
             this.tabPageGloriaFood.Controls.Add(this.btnGloriaFoodIniciar);
             this.tabPageGloriaFood.Location = new System.Drawing.Point(4, 22);
             this.tabPageGloriaFood.Name = "tabPageGloriaFood";
-            this.tabPageGloriaFood.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageGloriaFood.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPageGloriaFood.Size = new System.Drawing.Size(1231, 685);
             this.tabPageGloriaFood.TabIndex = 1;
             this.tabPageGloriaFood.Text = "Gloria Food";
@@ -6118,7 +6241,7 @@
             this.tabPageMultiPedido.Controls.Add(this.txtMultiPedidoToken);
             this.tabPageMultiPedido.Controls.Add(this.label109);
             this.tabPageMultiPedido.Location = new System.Drawing.Point(4, 22);
-            this.tabPageMultiPedido.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPageMultiPedido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageMultiPedido.Name = "tabPageMultiPedido";
             this.tabPageMultiPedido.Size = new System.Drawing.Size(1231, 685);
             this.tabPageMultiPedido.TabIndex = 30;
@@ -6432,7 +6555,7 @@
             this.tabPagePixCommerce.Controls.Add(this.txtPixCommerceToken);
             this.tabPagePixCommerce.Controls.Add(this.label108);
             this.tabPagePixCommerce.Location = new System.Drawing.Point(4, 22);
-            this.tabPagePixCommerce.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPagePixCommerce.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPagePixCommerce.Name = "tabPagePixCommerce";
             this.tabPagePixCommerce.Size = new System.Drawing.Size(1231, 685);
             this.tabPagePixCommerce.TabIndex = 29;
@@ -6568,7 +6691,7 @@
             this.tabPagePlug4Sales.Controls.Add(this.label128);
             this.tabPagePlug4Sales.Controls.Add(this.btnPlug4SalesToken);
             this.tabPagePlug4Sales.Location = new System.Drawing.Point(4, 22);
-            this.tabPagePlug4Sales.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPagePlug4Sales.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPagePlug4Sales.Name = "tabPagePlug4Sales";
             this.tabPagePlug4Sales.Size = new System.Drawing.Size(1231, 685);
             this.tabPagePlug4Sales.TabIndex = 38;
@@ -7015,7 +7138,7 @@
             this.tabPageSelfBuyMe.Controls.Add(this.txtSelfBuyMeToken);
             this.tabPageSelfBuyMe.Controls.Add(this.label123);
             this.tabPageSelfBuyMe.Location = new System.Drawing.Point(4, 22);
-            this.tabPageSelfBuyMe.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPageSelfBuyMe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageSelfBuyMe.Name = "tabPageSelfBuyMe";
             this.tabPageSelfBuyMe.Size = new System.Drawing.Size(1231, 685);
             this.tabPageSelfBuyMe.TabIndex = 37;
@@ -7362,7 +7485,7 @@
             this.tabPageSimbora.Controls.Add(this.txtSimboraToken);
             this.tabPageSimbora.Controls.Add(this.label113);
             this.tabPageSimbora.Location = new System.Drawing.Point(4, 22);
-            this.tabPageSimbora.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPageSimbora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageSimbora.Name = "tabPageSimbora";
             this.tabPageSimbora.Size = new System.Drawing.Size(1231, 685);
             this.tabPageSimbora.TabIndex = 31;
@@ -7373,7 +7496,7 @@
             // 
             this.btnSimboraConsultarAtualizacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSimboraConsultarAtualizacoes.Location = new System.Drawing.Point(614, 405);
-            this.btnSimboraConsultarAtualizacoes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSimboraConsultarAtualizacoes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSimboraConsultarAtualizacoes.Name = "btnSimboraConsultarAtualizacoes";
             this.btnSimboraConsultarAtualizacoes.Size = new System.Drawing.Size(232, 31);
             this.btnSimboraConsultarAtualizacoes.TabIndex = 53;
@@ -7385,7 +7508,7 @@
             // 
             this.btnSimboraConfirmarPedidoPronto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSimboraConfirmarPedidoPronto.Location = new System.Drawing.Point(788, 360);
-            this.btnSimboraConfirmarPedidoPronto.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSimboraConfirmarPedidoPronto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSimboraConfirmarPedidoPronto.Name = "btnSimboraConfirmarPedidoPronto";
             this.btnSimboraConfirmarPedidoPronto.Size = new System.Drawing.Size(232, 31);
             this.btnSimboraConfirmarPedidoPronto.TabIndex = 52;
@@ -7397,7 +7520,7 @@
             // 
             this.btnSimboraConsultarPedidoRoteirazados.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSimboraConsultarPedidoRoteirazados.Location = new System.Drawing.Point(496, 360);
-            this.btnSimboraConsultarPedidoRoteirazados.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSimboraConsultarPedidoRoteirazados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSimboraConsultarPedidoRoteirazados.Name = "btnSimboraConsultarPedidoRoteirazados";
             this.btnSimboraConsultarPedidoRoteirazados.Size = new System.Drawing.Size(277, 31);
             this.btnSimboraConsultarPedidoRoteirazados.TabIndex = 51;
@@ -7409,7 +7532,7 @@
             // 
             this.btnSimboraCOnfirmarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSimboraCOnfirmarPedido.Location = new System.Drawing.Point(788, 324);
-            this.btnSimboraCOnfirmarPedido.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSimboraCOnfirmarPedido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSimboraCOnfirmarPedido.Name = "btnSimboraCOnfirmarPedido";
             this.btnSimboraCOnfirmarPedido.Size = new System.Drawing.Size(146, 31);
             this.btnSimboraCOnfirmarPedido.TabIndex = 50;
@@ -7421,7 +7544,7 @@
             // 
             this.btnSimboraConsultarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSimboraConsultarPedido.Location = new System.Drawing.Point(637, 324);
-            this.btnSimboraConsultarPedido.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSimboraConsultarPedido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSimboraConsultarPedido.Name = "btnSimboraConsultarPedido";
             this.btnSimboraConsultarPedido.Size = new System.Drawing.Size(146, 31);
             this.btnSimboraConsultarPedido.TabIndex = 49;
@@ -7433,7 +7556,7 @@
             // 
             this.btnSimboraFazerPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSimboraFazerPedido.Location = new System.Drawing.Point(486, 324);
-            this.btnSimboraFazerPedido.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSimboraFazerPedido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSimboraFazerPedido.Name = "btnSimboraFazerPedido";
             this.btnSimboraFazerPedido.Size = new System.Drawing.Size(146, 31);
             this.btnSimboraFazerPedido.TabIndex = 48;
@@ -7907,9 +8030,10 @@
             // btnBigFishObterCliente
             // 
             this.btnBigFishObterCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBigFishObterCliente.Location = new System.Drawing.Point(910, 111);
+            this.btnBigFishObterCliente.Location = new System.Drawing.Point(909, 111);
+            this.btnBigFishObterCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBigFishObterCliente.Name = "btnBigFishObterCliente";
-            this.btnBigFishObterCliente.Size = new System.Drawing.Size(144, 39);
+            this.btnBigFishObterCliente.Size = new System.Drawing.Size(148, 39);
             this.btnBigFishObterCliente.TabIndex = 61;
             this.btnBigFishObterCliente.Text = "Obter Cliente";
             this.btnBigFishObterCliente.UseVisualStyleBackColor = true;
@@ -8009,7 +8133,7 @@
             this.txtBigFishSenha.Name = "txtBigFishSenha";
             this.txtBigFishSenha.Size = new System.Drawing.Size(187, 26);
             this.txtBigFishSenha.TabIndex = 52;
-            this.txtBigFishSenha.Text = "izZyw@y951";
+            this.txtBigFishSenha.Text = "7XP9od3(";
             // 
             // labelBigFishSenha
             // 
@@ -8028,7 +8152,7 @@
             this.txtBigFishUsuario.Name = "txtBigFishUsuario";
             this.txtBigFishUsuario.Size = new System.Drawing.Size(187, 26);
             this.txtBigFishUsuario.TabIndex = 50;
-            this.txtBigFishUsuario.Text = "izzyway";
+            this.txtBigFishUsuario.Text = "rafael";
             // 
             // labelBigFishUsuario
             // 
@@ -8057,7 +8181,7 @@
             this.txtBigFishURL.Name = "txtBigFishURL";
             this.txtBigFishURL.Size = new System.Drawing.Size(430, 26);
             this.txtBigFishURL.TabIndex = 47;
-            this.txtBigFishURL.Text = "https://nutribee-izzyway.octoserver.com.br/webservice";
+            this.txtBigFishURL.Text = "https://nutribee.octoserver.com.br/webservice";
             // 
             // btnBigFishParar
             // 
@@ -8094,6 +8218,9 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.btn.ResumeLayout(false);
+            this.tabPageVMarket.ResumeLayout(false);
+            this.tabPageVMarket.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridVMarket)).EndInit();
             this.tabPageDegustAi.ResumeLayout(false);
             this.tabPageDegustAi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridIorion)).EndInit();
@@ -8879,6 +9006,16 @@
         private System.Windows.Forms.Button btnBigFishCancelado;
         private System.Windows.Forms.Button btnBigFishEntregue;
         private System.Windows.Forms.Button btnBigFishImportado;
+        private System.Windows.Forms.TabPage tabPageVMarket;
+        private System.Windows.Forms.Button btnVMarketGerarToken;
+        private System.Windows.Forms.Label label134;
+        private System.Windows.Forms.TextBox txtVMarketSenha;
+        private System.Windows.Forms.Label label135;
+        private System.Windows.Forms.TextBox txtVMarketEmail;
+        private System.Windows.Forms.TextBox txtVMarketToken;
+        private System.Windows.Forms.Button btnVMarketBuscarPedidos;
+        private System.Windows.Forms.Button btnVMarketBuscarPedido;
+        private System.Windows.Forms.DataGridView gridVMarket;
         private System.Windows.Forms.Button btnBigFishObterCliente;
     }
 }
