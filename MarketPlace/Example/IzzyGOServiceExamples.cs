@@ -36,8 +36,8 @@ namespace IzzyGO.OpenDelivery.Examples
                     FormattedAddress = "Rua das Flores, 123 - Centro, Fortaleza - CE",
                     Coordinates = new Coordinates
                     {
-                        Latitude = -3.7319,
-                        Longitude = -38.5267
+                        Latitude = Convert.ToDecimal("-3.7256"),
+                        Longitude = Convert.ToDecimal("-38.4892")
                     }
                 }
             };
@@ -96,8 +96,8 @@ namespace IzzyGO.OpenDelivery.Examples
                     Instructions = "Ligar no interfone 1201",
                     Coordinates = new Coordinates
                     {
-                        Latitude = -3.7256,
-                        Longitude = -38.4892
+                        Latitude = Convert.ToDecimal("-3.7256"),
+                        Longitude = Convert.ToDecimal("-38.4892")
                     }
                 },
 
@@ -114,8 +114,8 @@ namespace IzzyGO.OpenDelivery.Examples
                     PostalCode = "60165-070",
                     Coordinates = new Coordinates
                     {
-                        Latitude = -3.7280,
-                        Longitude = -38.4950
+                        Latitude = Convert.ToDecimal("-3.7280"),
+                        Longitude = Convert.ToDecimal("-38.4950")
                     }
                 },
 
@@ -187,11 +187,10 @@ namespace IzzyGO.OpenDelivery.Examples
                 },
 
                 // Rastreamento de origem
-                Source = new SourceTracking
-                {
-                    AppId = "ifood",
-                    OrderId = "IFOOD-ABC123"
-                },
+
+                SourceAppId = "ifood",
+                SourceOrderId = "IFOOD-ABC123",
+
 
                 // Configurações adicionais
                 SpecialInstructions = "Cliente alérgico a amendoim. Não incluir sachês.",
@@ -245,8 +244,8 @@ namespace IzzyGO.OpenDelivery.Examples
                     Neighborhood = "Aldeota",
                     Coordinates = new Coordinates
                     {
-                        Latitude = -3.7400,
-                        Longitude = -38.5100
+                        Latitude = Convert.ToDecimal("-3.7256"),
+                        Longitude = Convert.ToDecimal("-38.4892")
                     }
                 },
                 Pricing = new OrderPricing
@@ -308,16 +307,14 @@ namespace IzzyGO.OpenDelivery.Examples
                     PostalCode = "60135-190",
                     Coordinates = new Coordinates
                     {
-                        Latitude = -3.7450,
-                        Longitude = -38.5050
+                        Latitude = Convert.ToDecimal("-3.7256"),
+                        Longitude = Convert.ToDecimal("-38.4892")
                     }
                 },
 
-                Source = new SourceTracking
-                {
-                    AppId = "ifood",
-                    OrderId = "IFOOD-ORIG-789456"
-                },
+
+                SourceAppId = "ifood",
+                SourceOrderId = "IFOOD-ORIG-789456",
 
                 Items = new List<OrderItem>
                 {
@@ -363,7 +360,7 @@ namespace IzzyGO.OpenDelivery.Examples
             if (response.Success)
             {
                 Console.WriteLine($"Entrega iFood criada: {response.Id}");
-                Console.WriteLine($"Origem: {request.Source.AppId} - {request.OrderId}");
+                Console.WriteLine($"Origem: {request.SourceAppId} - {request.OrderId}");
             }
         }
 
@@ -447,8 +444,8 @@ namespace IzzyGO.OpenDelivery.Examples
                     Neighborhood = "Aldeota",
                     Coordinates = new Coordinates
                     {
-                        Latitude = -3.7350,
-                        Longitude = -38.5000
+                        Latitude = -3.742678m,
+                        Longitude = -38.507058m
                     }
                 },
                 Items = new List<OrderItem>
