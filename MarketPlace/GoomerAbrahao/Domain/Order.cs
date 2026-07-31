@@ -8,7 +8,7 @@ namespace GoomerAbrahao.Domain
     public class Order
     {
         [JsonProperty("id")]
-        public Guid Id { get; set; }
+        public string Id { get; set; }
 
         [JsonProperty("date")]
         public DateTime Date { get; set; }
@@ -57,5 +57,11 @@ namespace GoomerAbrahao.Domain
 
         [JsonProperty("items")]
         public List<OrderItem> Items { get; set; }
+
+        [JsonIgnore]
+        public string Reference
+        {
+            get { return Id.Replace("-", "").Substring(0, 6).ToUpper(); }
+        }
     }
 }

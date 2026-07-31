@@ -10,10 +10,10 @@ namespace GoomerAbrahao.Domain
     public class OrderOption
     {
         [JsonProperty("id")]
-        public Guid Id { get; set; }
+        public string Id { get; set; }
 
         [JsonProperty("option_id")]
-        public Guid OptionId { get; set; }
+        public string OptionId { get; set; }
 
         [JsonProperty("code")]
         public string Code { get; set; }
@@ -32,5 +32,14 @@ namespace GoomerAbrahao.Domain
 
         [JsonProperty("extra_fields")]
         public JObject ExtraFields { get; set; }
+
+        [JsonIgnore]
+        public decimal Total
+        {
+            get
+            {
+                return Quantity * Price;
+            }
+        }
     }
 }
