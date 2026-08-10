@@ -30,6 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btn = new System.Windows.Forms.TabControl();
+            this.tabPageADAC = new System.Windows.Forms.TabPage();
+            this.txtADACUrl = new System.Windows.Forms.TextBox();
+            this.label163 = new System.Windows.Forms.Label();
+            this.txtADACToken = new System.Windows.Forms.TextBox();
+            this.label162 = new System.Windows.Forms.Label();
+            this.btnADACAceitar = new System.Windows.Forms.Button();
+            this.gridADAC = new System.Windows.Forms.DataGridView();
+            this.btnADACParar = new System.Windows.Forms.Button();
+            this.btnADACIniciar = new System.Windows.Forms.Button();
             this.tabPage99Food = new System.Windows.Forms.TabPage();
             this.btn99FoodToken = new System.Windows.Forms.Button();
             this.txt99FoodToken = new System.Windows.Forms.TextBox();
@@ -755,8 +764,7 @@
             this.txtTokenIzzyGO = new System.Windows.Forms.TextBox();
             this.btnClearResults = new System.Windows.Forms.Button();
             this.btnPedidoSimplesIzzyGO = new System.Windows.Forms.Button();
-            this.lbIzzyGOResults = new System.Windows.Forms.ListBox();
-            this.LoopIzzy = new System.Windows.Forms.TabPage();
+            this.lbIzzyGOResults = new System.Windows.Forms.ListBox();            
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button5 = new System.Windows.Forms.Button();
             this.txtNewClienteTelefone = new System.Windows.Forms.TextBox();
@@ -812,7 +820,12 @@
             this.txtAbrahaoToken = new System.Windows.Forms.TextBox();
             this.btnAbrahaoParar = new System.Windows.Forms.Button();
             this.btnAbrahaoIniciar = new System.Windows.Forms.Button();
+            this.txtADACLoja = new System.Windows.Forms.TextBox();
+            this.label164 = new System.Windows.Forms.Label();
+            this.btnADACPedidoPronto = new System.Windows.Forms.Button();
             this.btn.SuspendLayout();
+            this.tabPageADAC.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridADAC)).BeginInit();
             this.tabPage99Food.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid99Food)).BeginInit();
             this.tabPagePrefiroDelivery.SuspendLayout();
@@ -915,6 +928,7 @@
             // 
             // btn
             // 
+            this.btn.Controls.Add(this.tabPageADAC);
             this.btn.Controls.Add(this.tabPage99Food);
             this.btn.Controls.Add(this.tabPagePrefiroDelivery);
             this.btn.Controls.Add(this.tabPageDeliveryVip);
@@ -972,6 +986,106 @@
             this.btn.SelectedIndex = 0;
             this.btn.Size = new System.Drawing.Size(1239, 711);
             this.btn.TabIndex = 0;
+            // 
+            // tabPageADAC
+            // 
+            this.tabPageADAC.Controls.Add(this.btnADACPedidoPronto);
+            this.tabPageADAC.Controls.Add(this.txtADACLoja);
+            this.tabPageADAC.Controls.Add(this.label164);
+            this.tabPageADAC.Controls.Add(this.txtADACUrl);
+            this.tabPageADAC.Controls.Add(this.label163);
+            this.tabPageADAC.Controls.Add(this.txtADACToken);
+            this.tabPageADAC.Controls.Add(this.label162);
+            this.tabPageADAC.Controls.Add(this.btnADACAceitar);
+            this.tabPageADAC.Controls.Add(this.gridADAC);
+            this.tabPageADAC.Controls.Add(this.btnADACParar);
+            this.tabPageADAC.Controls.Add(this.btnADACIniciar);
+            this.tabPageADAC.Location = new System.Drawing.Point(4, 22);
+            this.tabPageADAC.Name = "tabPageADAC";
+            this.tabPageADAC.Size = new System.Drawing.Size(1231, 685);
+            this.tabPageADAC.TabIndex = 49;
+            this.tabPageADAC.Text = "ADAC";
+            this.tabPageADAC.UseVisualStyleBackColor = true;
+            // 
+            // txtADACUrl
+            // 
+            this.txtADACUrl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtADACUrl.Location = new System.Drawing.Point(160, 76);
+            this.txtADACUrl.Name = "txtADACUrl";
+            this.txtADACUrl.Size = new System.Drawing.Size(386, 26);
+            this.txtADACUrl.TabIndex = 68;
+            this.txtADACUrl.Text = "https://lipsfiha.whatsapp.api.adac-softwares.com.br";
+            // 
+            // label163
+            // 
+            this.label163.AutoSize = true;
+            this.label163.Location = new System.Drawing.Point(21, 84);
+            this.label163.Name = "label163";
+            this.label163.Size = new System.Drawing.Size(20, 13);
+            this.label163.TabIndex = 67;
+            this.label163.Text = "Url";
+            // 
+            // txtADACToken
+            // 
+            this.txtADACToken.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtADACToken.Location = new System.Drawing.Point(160, 24);
+            this.txtADACToken.Name = "txtADACToken";
+            this.txtADACToken.Size = new System.Drawing.Size(386, 26);
+            this.txtADACToken.TabIndex = 66;
+            this.txtADACToken.Text = "5O/Q2|z.7rFDwar+cd!0$5)/ju1nayhq2+5bqiMVbpsO)WoV^Ih.kcKWoq7)jT[?";
+            // 
+            // label162
+            // 
+            this.label162.AutoSize = true;
+            this.label162.Location = new System.Drawing.Point(21, 32);
+            this.label162.Name = "label162";
+            this.label162.Size = new System.Drawing.Size(38, 13);
+            this.label162.TabIndex = 65;
+            this.label162.Text = "Token";
+            // 
+            // btnADACAceitar
+            // 
+            this.btnADACAceitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnADACAceitar.Location = new System.Drawing.Point(11, 141);
+            this.btnADACAceitar.Name = "btnADACAceitar";
+            this.btnADACAceitar.Size = new System.Drawing.Size(171, 39);
+            this.btnADACAceitar.TabIndex = 64;
+            this.btnADACAceitar.Text = "Aceitar";
+            this.btnADACAceitar.UseVisualStyleBackColor = true;
+            this.btnADACAceitar.Click += new System.EventHandler(this.btnADACAceitar_Click);
+            // 
+            // gridADAC
+            // 
+            this.gridADAC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridADAC.Location = new System.Drawing.Point(11, 186);
+            this.gridADAC.Name = "gridADAC";
+            this.gridADAC.RowHeadersWidth = 51;
+            this.gridADAC.Size = new System.Drawing.Size(1209, 480);
+            this.gridADAC.TabIndex = 63;
+            this.gridADAC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridADAC_CellClick);
+            // 
+            // btnADACParar
+            // 
+            this.btnADACParar.Enabled = false;
+            this.btnADACParar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnADACParar.Location = new System.Drawing.Point(1049, 70);
+            this.btnADACParar.Name = "btnADACParar";
+            this.btnADACParar.Size = new System.Drawing.Size(171, 39);
+            this.btnADACParar.TabIndex = 62;
+            this.btnADACParar.Text = "Parar";
+            this.btnADACParar.UseVisualStyleBackColor = true;
+            this.btnADACParar.Click += new System.EventHandler(this.btnADACParar_Click);
+            // 
+            // btnADACIniciar
+            // 
+            this.btnADACIniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnADACIniciar.Location = new System.Drawing.Point(1049, 18);
+            this.btnADACIniciar.Name = "btnADACIniciar";
+            this.btnADACIniciar.Size = new System.Drawing.Size(171, 39);
+            this.btnADACIniciar.TabIndex = 61;
+            this.btnADACIniciar.Text = "Iniciar";
+            this.btnADACIniciar.UseVisualStyleBackColor = true;
+            this.btnADACIniciar.Click += new System.EventHandler(this.btnADACIniciar_Click);
             // 
             // tabPage99Food
             // 
@@ -9034,8 +9148,7 @@
             this.groupBox4.Size = new System.Drawing.Size(450, 183);
             this.groupBox4.TabIndex = 9;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Dados Novo Cliente";
-            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
+            this.groupBox4.Text = "Dados Novo Cliente";            
             // 
             // button5
             // 
@@ -9270,7 +9383,6 @@
             this.txtCPFClientePedidoLoopIzy.Name = "txtCPFClientePedidoLoopIzy";
             this.txtCPFClientePedidoLoopIzy.Size = new System.Drawing.Size(135, 20);
             this.txtCPFClientePedidoLoopIzy.TabIndex = 5;
-            this.txtCPFClientePedidoLoopIzy.TextChanged += new System.EventHandler(this.txtCPFClientePedidoLoopIzy_TextChanged);
             // 
             // label154
             // 
@@ -9581,6 +9693,7 @@
             this.label162.Text = "Token";
             // 
             // txtAbrahaoToken
+            // txtADACLoja
             // 
             this.txtAbrahaoToken.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAbrahaoToken.Location = new System.Drawing.Point(78, 70);
@@ -9588,8 +9701,15 @@
             this.txtAbrahaoToken.Size = new System.Drawing.Size(416, 26);
             this.txtAbrahaoToken.TabIndex = 28;
             this.txtAbrahaoToken.Text = "mDspG7Qt04EcT8ipRJJHUY-m3ncBc1za";
+            this.txtADACLoja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtADACLoja.Location = new System.Drawing.Point(639, 76);
+            this.txtADACLoja.Name = "txtADACLoja";
+            this.txtADACLoja.Size = new System.Drawing.Size(386, 26);
+            this.txtADACLoja.TabIndex = 70;
+            this.txtADACLoja.Text = "6";
             // 
             // btnAbrahaoParar
+            // label164
             // 
             this.btnAbrahaoParar.Enabled = false;
             this.btnAbrahaoParar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -9600,8 +9720,15 @@
             this.btnAbrahaoParar.Text = "Parar";
             this.btnAbrahaoParar.UseVisualStyleBackColor = true;
             this.btnAbrahaoParar.Click += new System.EventHandler(this.btnAbrahaoParar_Click);
+            this.label164.AutoSize = true;
+            this.label164.Location = new System.Drawing.Point(580, 92);
+            this.label164.Name = "label164";
+            this.label164.Size = new System.Drawing.Size(27, 13);
+            this.label164.TabIndex = 69;
+            this.label164.Text = "Loja";
             // 
             // btnAbrahaoIniciar
+            // btnADACPedidoPronto
             // 
             this.btnAbrahaoIniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbrahaoIniciar.Location = new System.Drawing.Point(1152, 19);
@@ -9611,6 +9738,14 @@
             this.btnAbrahaoIniciar.Text = "Iniciar";
             this.btnAbrahaoIniciar.UseVisualStyleBackColor = true;
             this.btnAbrahaoIniciar.Click += new System.EventHandler(this.btnAbrahaoIniciar_Click);
+            this.btnADACPedidoPronto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnADACPedidoPronto.Location = new System.Drawing.Point(188, 141);
+            this.btnADACPedidoPronto.Name = "btnADACPedidoPronto";
+            this.btnADACPedidoPronto.Size = new System.Drawing.Size(171, 39);
+            this.btnADACPedidoPronto.TabIndex = 71;
+            this.btnADACPedidoPronto.Text = "Pedido Pronto";
+            this.btnADACPedidoPronto.UseVisualStyleBackColor = true;
+            this.btnADACPedidoPronto.Click += new System.EventHandler(this.btnADACPedidoPronto_Click);
             // 
             // Form1
             // 
@@ -9625,6 +9760,9 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.btn.ResumeLayout(false);
+            this.tabPageADAC.ResumeLayout(false);
+            this.tabPageADAC.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridADAC)).EndInit();
             this.tabPage99Food.ResumeLayout(false);
             this.tabPage99Food.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid99Food)).EndInit();
@@ -10566,6 +10704,15 @@
         private System.Windows.Forms.Button btnAbrahaoCancelar;
         private System.Windows.Forms.Button btnAbrahaoFechamento;
         private System.Windows.Forms.Button btnAbrahaoExtrato;
+        private System.Windows.Forms.TabPage tabPageADAC;
+        private System.Windows.Forms.TextBox txtADACUrl;        
+        private System.Windows.Forms.TextBox txtADACToken;        
+        private System.Windows.Forms.Button btnADACAceitar;
+        private System.Windows.Forms.DataGridView gridADAC;
+        private System.Windows.Forms.Button btnADACParar;
+        private System.Windows.Forms.Button btnADACIniciar;
+        private System.Windows.Forms.TextBox txtADACLoja;        
+        private System.Windows.Forms.Button btnADACPedidoPronto;
     }
 }
 
